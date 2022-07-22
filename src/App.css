@@ -13,7 +13,7 @@ body {
     color: rgba(255, 255, 255);
     border-radius: 50% !important;
     position: absolute;
-    z-index: 1;
+    z-index: 10;
     left: -20px;
     top: -20px;
     display: flex;
@@ -31,9 +31,8 @@ body {
 }
 
 .carousel-indicators:hover .rounded {
-    width: 100px !important;
-    height: 100px !important;
-    background-color: #fff !important;
+    width: 20px!important;
+    height: 20px!important;
 }
 
 
@@ -59,16 +58,7 @@ body {
     height: 100vh;
 }
 
-@keyframes imgAnimation {
-    from{
-        width: 100vw;
-        height: 100vh;
-    } 
-    to{
-        width: 150vw;
-        height: 150vh;
-    }
-}
+
 
 .carousel-indicators{
     display: flex;
@@ -83,10 +73,10 @@ body {
     width: 10px;
     margin: 10px 0;
     border: 2px solid #eee;
-    border-radius: 50%;   
+    border-radius: 50%;
 }
 
-.carousel-caption {
+.carousel-text {
     position: absolute;
     left: 0;
     top: 0;
@@ -105,5 +95,34 @@ body {
 img {
     width: 150vw;
     height: 150vh;
-    animation: imgAnimation 5s;
+    animation: imgAnimation 15s ease;
+    animation-delay: 500ms;
+}
+
+
+.title {
+    animation: titleAnimation 2s ease;
+    animation-delay: 500ms;
+    padding-left: 44vw;
+}
+
+
+@keyframes imgAnimation {
+    from{
+        width: 100vw;
+        height: 120vh;
+    } 
+    to{
+        width: 150vw;
+        height: 150vh;
+    }
+}
+
+@keyframes titleAnimation {
+    from {
+        padding-left: 0;
+    }
+    to {
+        padding-left: 44vw;
+    }
 }
