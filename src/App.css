@@ -30,11 +30,6 @@ body {
     cursor: pointer;
 }
 
-.carousel-indicators:hover .rounded {
-    width: 20px!important;
-    height: 20px!important;
-}
-
 
 .vert .carousel-item-next.carousel-item-left,
 .vert .carousel-item-prev.carousel-item-right {
@@ -84,6 +79,7 @@ body {
     width: 100vw;
     height: 100vh;
     color: white;
+    padding-top: 35vh;
 }
 
 .carousel-item.active {
@@ -106,6 +102,20 @@ img {
     padding-left: 44vw;
 }
 
+.sub-title {
+    padding-left: 44vw;
+}
+
+.sub-title {
+    animation: titleAnimation 3s ease-out;
+}
+
+.carousel-text p {
+    animation: paraAnimation 4s ease-out;
+    width: 50vw;
+    margin-left: 25vw;
+}
+
 
 @keyframes imgAnimation {
     from{
@@ -124,5 +134,13 @@ img {
     }
     to {
         padding-left: 44vw;
+    }
+}
+@keyframes paraAnimation {
+    from {
+        margin-left:0;
+    }
+    to {
+        margin-left: 25vw;
     }
 }
