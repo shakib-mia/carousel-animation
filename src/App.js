@@ -33,7 +33,7 @@ function App() {
             alt=""
           />
 
-          <div className="carousel-text">
+          <div className="carousel-text d-flex flex-column justify-content-center">
             <h1 className="title">Title</h1>
             <h5 className="sub-title">Sub Title</h5>
             <p>
@@ -49,7 +49,7 @@ function App() {
             src="https://c4.wallpaperflare.com/wallpaper/41/681/303/pc-hd-1080p-nature-1920x1080-wallpaper-preview.jpg"
             alt=""
           />
-          <div className="carousel-text">
+          <div className="carousel-text d-flex flex-column justify-content-center">
             <h1 className="title">Title</h1>
             <h5 className="sub-title">Sub Title</h5>
             <p>
@@ -65,7 +65,7 @@ function App() {
             src="https://c4.wallpaperflare.com/wallpaper/41/681/303/pc-hd-1080p-nature-1920x1080-wallpaper-preview.jpg"
             alt=""
           />
-          <div className="carousel-text">
+          <div className="carousel-text d-flex flex-column justify-content-center">
             <h1 className="title">Title</h1>
             <h5 className="sub-title">Sub Title</h5>
             <p>
@@ -81,7 +81,7 @@ function App() {
             src="https://c4.wallpaperflare.com/wallpaper/41/681/303/pc-hd-1080p-nature-1920x1080-wallpaper-preview.jpg"
             alt=""
           />
-          <div className="carousel-text">
+          <div className="carousel-text d-flex flex-column justify-content-center">
             <h1 className="title">Title</h1>
             <h5 className="sub-title">Sub Title</h5>
             <p>
@@ -97,7 +97,7 @@ function App() {
             src="https://c4.wallpaperflare.com/wallpaper/41/681/303/pc-hd-1080p-nature-1920x1080-wallpaper-preview.jpg"
             alt=""
           />
-          <div className="carousel-text">
+          <div className="carousel-text d-flex flex-column justify-content-center">
             <h1 className="title">Title</h1>
             <h5 className="sub-title">Sub Title</h5>
             <p>
@@ -113,7 +113,7 @@ function App() {
             src="https://c4.wallpaperflare.com/wallpaper/41/681/303/pc-hd-1080p-nature-1920x1080-wallpaper-preview.jpg"
             alt=""
           />
-          <div className="carousel-text">
+          <div className="carousel-text d-flex flex-column justify-content-center">
             <h1 className="title">Title</h1>
             <h5 className="sub-title">Sub Title</h5>
             <p>
