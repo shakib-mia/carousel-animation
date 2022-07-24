@@ -10,6 +10,11 @@ html {
     width: 100vw;
 }
 
+.sticky-top {
+    z-index: 0 !important;
+}
+
+/* cursor style */
 
 .rounded{
     width:40px;
@@ -17,8 +22,8 @@ html {
     background-color: rgba(255, 0, 0, 0.5);
     color: rgba(255, 255, 255);
     border-radius: 50% !important;
-    position: fixed;
-    z-index: 10;
+    position: absolute;
+    z-index: 1;
     top: -20px;
     left: -20px;
     display: flex;
@@ -31,3 +36,41 @@ html {
     font-weight: lighter;
 }
 
+/* Indicators style */
+
+.indicators-container {
+    position: fixed;
+    z-index: 11;
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    padding-top: 40vh;
+}
+
+.indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #333;
+    margin: 5px;
+    border-radius: 50%;
+}
+
+.indicator:focus {
+    background-color: #fff;
+}
+
+
+/* pages style */
+
+#pages {
+    width: 100vw;
+    height: 650vh;
+}
+
+/* Items Style */
+
+.item {
+    height: 100vh;
+    background-color: #eee;
+}
