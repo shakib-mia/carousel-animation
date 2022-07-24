@@ -1,10 +1,15 @@
-body {
-    overflow: hidden;
+::-webkit-scrollbar {
+    display: none;
 }
 
-.carousel-indicators>li:hover .rounded {
-    background-color: #fff;
+html {
+    scroll-behavior: smooth;
 }
+
+.App {
+    width: 100vw;
+}
+
 
 .rounded{
     width:40px;
@@ -12,10 +17,10 @@ body {
     background-color: rgba(255, 0, 0, 0.5);
     color: rgba(255, 255, 255);
     border-radius: 50% !important;
-    position: absolute;
+    position: fixed;
     z-index: 10;
-    left: -20px;
     top: -20px;
+    left: -20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,120 +31,3 @@ body {
     font-weight: lighter;
 }
 
-.carousel-indicators:hover{
-    cursor: pointer;
-}
-
-
-.vert .carousel-item-next.carousel-item-left,
-.vert .carousel-item-prev.carousel-item-right {
-    -webkit-transform: translateY(100%);
-            transform: translateY(0%);
-}
-
-.vert .carousel-item-next,
-.vert .active.carousel-item-right {
-    -webkit-transform: translateY(0%);
-            transform: translateY(100%);            
-}
-
-.vert .carousel-item-prev,
-.vert .active.carousel-item-left {
--webkit-transform: translateY(0%);
-        transform: translateY(0%);
-}
-
-.carousel, .carousel-inner {
-    height: 100vh;
-}
-
-
-
-.carousel-indicators{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    left: 82vw;
-    top: 0;
-}
-
-.carousel-indicators li {
-    height: 10px;
-    width: 10px;
-    margin: 10px 0;
-    border: 2px solid #eee;
-    border-radius: 50%;
-}
-
-.carousel-text {
-    position: absolute;
-    left: 0;
-    top: 0;
-    background: rgba(0, 0, 0, 0.5);
-    width: 100vw;
-    height: 100vh;
-    color: white;
-}
-
-.carousel-item.active {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-img {
-    width: 150vw;
-    height: 150vh;
-    animation: imgAnimation 15s ease;
-    animation-delay: 500ms;
-}
-
-
-.title {
-    animation: titleAnimation 2s ease;
-    animation-delay: 500ms;
-    padding-left: 44vw;
-}
-
-.sub-title {
-    padding-left: 44vw;
-}
-
-.sub-title {
-    animation: titleAnimation 3s ease-out;
-}
-
-.carousel-text p {
-    animation: paraAnimation 4s ease-out;
-    width: 50vw;
-    margin-left: 25vw;
-}
-
-
-@keyframes imgAnimation {
-    from{
-        width: 100vw;
-        height: 120vh;
-    } 
-    to{
-        width: 150vw;
-        height: 150vh;
-    }
-}
-
-@keyframes titleAnimation {
-    from {
-        padding-left: 0;
-    }
-    to {
-        padding-left: 44vw;
-    }
-}
-@keyframes paraAnimation {
-    from {
-        margin-left:0;
-    }
-    to {
-        margin-left: 25vw;
-    }
-}
