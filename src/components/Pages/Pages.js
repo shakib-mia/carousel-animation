@@ -8,7 +8,6 @@ import Item6 from "../Items/Item6";
 
 const Pages = () => {
   const moveCursor = (e) => {
-    console.log(e);
     const cursorRounded = document.querySelector(".rounded");
     const mouseY = e.pageY;
     const mouseX = e.pageX;
