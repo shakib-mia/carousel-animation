@@ -6,23 +6,27 @@ const Item4 = () => {
   const blog = useRef(null);
 
   useEffect(() => {
-    gsap.to(fourth.current, {
-      paddingTop: 50,
-      duration: 2,
-      scrollTrigger: {
-        trigger: fourth.current,
+    gsap.fromTo(
+      ".d-flex",
+      {
+        top: 600,
       },
-    });
+      {
+        top: 0,
+        duration: 2,
+        scrollTrigger: {
+          trigger: fourth.current,
+        },
+      }
+    );
   }, []);
 
   return (
-    <div style={{ backgroundColor: "#f7f7f7" }}>
-      <div
-        className="item container text-center"
-        id="item4"
-        ref={fourth}
-        style={{ paddingTop: 100, paddingBottom: 50 }}
-      >
+    <div
+      style={{ backgroundColor: "#f7f7f7", height: "100vh" }}
+      className="d-flex align-items-center"
+    >
+      <div className="item container text-center" id="item4" ref={fourth}>
         <h4 className="text-center font-weight-bold">Latest News</h4>
         <div className="row justify-content-around">
           <div className="col-12 col-md-6 col-lg-4 blog" ref={blog}>
