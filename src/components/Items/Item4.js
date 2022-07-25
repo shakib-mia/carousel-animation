@@ -1,30 +1,33 @@
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
 import React, { useEffect, useRef } from "react";
 
 const Item4 = () => {
   const fourth = useRef(null);
   const blog = useRef(null);
+  const blogsRef = useRef(null);
+
+  gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
-    gsap.fromTo(
-      ".d-flex",
-      {
-        top: 600,
+    gsap.to(blogsRef.current, {
+      scrollTrigger: {
+        trigger: fourth.current,
       },
-      {
-        top: 0,
-        duration: 2,
-        scrollTrigger: {
-          trigger: fourth.current,
-        },
-      }
-    );
+      paddingTop: 0,
+      duration: 1,
+    });
   }, []);
 
   return (
     <div
-      style={{ backgroundColor: "#f7f7f7", height: "100vh" }}
+      style={{
+        backgroundColor: "#f7f7f7",
+        height: "100vh",
+        paddingTop: "100vh",
+      }}
       className="d-flex align-items-center"
+      ref={blogsRef}
     >
       <div className="item container text-center" id="item4" ref={fourth}>
         <h4 className="text-center font-weight-bold">Latest News</h4>

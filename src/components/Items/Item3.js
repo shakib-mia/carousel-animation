@@ -54,7 +54,7 @@ const Item3 = () => {
 
     gsap.to(lowerText.current, {
       scrollTrigger: {
-        trigger: containerRef.current,
+        trigger: upperText.current,
       },
       left: "0",
       duration: 1,
@@ -89,11 +89,15 @@ const Item3 = () => {
             </div>
           </div>
           <hr className="bg-white" />
-          <div className="row" ref={lowerText} id="lower-text">
+          <div
+            className="row"
+            ref={lowerText}
+            id="lower-text"
+            style={{ left: "100vw" }}
+          >
             <div className="row">
               <div className="col-12 col-lg-3 d-flex align-items-center justify-content-center">
                 <i className="fas fa-layer-group fa-3x"></i>
-
                 <p className="col-8">
                   It’s dedication to innovation through experience.
                 </p>
@@ -131,6 +135,7 @@ const Item3 = () => {
         alt=""
         id="third-img"
         ref={imgRef}
+        width="100%"
       />
     </div>
   );

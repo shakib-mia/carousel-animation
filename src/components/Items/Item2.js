@@ -8,29 +8,20 @@ const Item2 = () => {
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
-    gsap.fromTo(
-      pageTwo.current,
-      {
-        opacity: 1,
-        paddingTop: "100vh",
-        delay: 1,
-        duration: 1,
-        scrollTrigger: "#two",
-      },
-      {
-        opacity: 1,
-        paddingTop: 15,
-        delay: 1,
-        duration: 1,
-        scrollTrigger: "#two",
-      }
-    );
+    gsap.to(pageTwo.current, {
+      opacity: 1,
+      top: 70,
+      delay: 1,
+      duration: 1,
+      scrollTrigger: "#tow",
+    });
   }, []);
   return (
     <div id="two" style={{ zIndex: -1 }}>
       <div
         className="col-12 col-lg-9 d-flex justify-content-around mx my-5 mx-auto pageTwo"
         ref={pageTwo}
+        style={{ top: "100vh" }}
       >
         <div className="show-card">
           <img
