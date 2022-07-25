@@ -15,6 +15,17 @@ const Item1 = () => {
         duration: 10,
       }
     );
+
+    gsap.fromTo(
+      "#text-container",
+      {
+        paddingTop: "100%",
+      },
+      {
+        paddingTop: "0%",
+        duration: 1,
+      }
+    );
   });
 
   return (
@@ -26,8 +37,8 @@ const Item1 = () => {
           ref={imgRef}
         />
       </div>
-      <div className="col-7">
-        <h1 className="display-4 ">
+      <div className="col-12 col-lg-7" id="text-container">
+        <h1 className="display-4">
           Create your unique inspiring colorways to the latest custom releases
           from NikeiD
         </h1>
