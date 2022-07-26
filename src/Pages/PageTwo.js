@@ -5,7 +5,7 @@ const PageTwo = () => {
     <div className="pageContainer" id="threeContainer">
       <div className="container">
         <div className="cards-container">
-          <div className="firstCard ">
+          <div className="firstCard">
             <img
               src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZHJvbmV8ZW58MHx8MHx8&w=1000&q=80"
               alt=""

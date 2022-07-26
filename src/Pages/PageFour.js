@@ -2,30 +2,39 @@ import React from "react";
 
 const PageFour = () => {
   return (
-    <div className="pageContainer" id="fourContainer">
-      <div className="pageTextContainer text-white d-flex justify-content-center align-items-center">
-        <div className="pageText col-6 text-center">
-          <h1 className="display-4 fw-bolder">
-            Create your unique inspiring colorways to the latest custom releases
-            from NikeiD
-          </h1>
-          <div className="paragraph">
-            <p className="my-5">
-              Uncode's update is all about new tech innovation and slick design
-              style.
-            </p>
-            <button className="btn btn-outline-danger rounded-pill px-4 py-2">
-              Buy Now - $59
-            </button>
-          </div>
+    <div className="pageContainer container blogSection text-center">
+      <div id="latestNewsContainer">
+        <h3 className="text-center mb-5">Latest News</h3>
+        <div className="row row-cols-1 row-cols-lg-3">
+          <a href="#" className="col blog my-3">
+            <img
+              src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2022/03/what-is-a-blog.png"
+              alt=""
+              className="blogImg"
+            />
+            <h1 className="caption">This is a blog post</h1>
+          </a>
+          <a href="#" className="col blog my-3">
+            <img
+              src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2022/03/what-is-a-blog.png"
+              alt=""
+              className="blogImg"
+            />
+            <h1 className="caption">This is a blog post</h1>
+          </a>
+          <a href="#" className="col blog my-3">
+            <img
+              src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2022/03/what-is-a-blog.png"
+              alt=""
+              className="blogImg"
+            />
+            <h1 className="caption">This is a blog post</h1>
+          </a>
         </div>
       </div>
-      <img
-        src="https://d3f86pfw66amx.cloudfront.net/uncode/wp-content/uploads/2017/09/andre-hunter-359225-min.webp"
-        alt=""
-        id="imgFour"
-        className="img"
-      />
+      <a href="#" className="red-button btn rounded-pill px-4">
+        The Blog
+      </a>
     </div>
   );
 };

@@ -51,51 +51,51 @@ function App() {
       currentPage?.getElementsByClassName("img"),
       {
         width: "100vw",
+        height: "100vh",
       },
       {
         width: "120vw",
+        height: "120vh",
         duration: 30,
         delay: 1,
       }
     );
 
     gsap.fromTo(
-      document.getElementById("firstImg"),
+      document.getElementById("thirdImage"),
       {
-        marginTop: "50vh",
-        opacity: 0,
-      },
-      {
-        marginTop: "0",
-        opacity: 1,
-        duration: 1,
-      }
-    );
-    gsap.fromTo(
-      document.getElementById("secondImg"),
-      {
-        opacity: 0,
-        top: "50vh",
-      },
-      {
-        opacity: 1,
-        top: "0",
-        duration: 1,
-        delay: 0.5,
-      }
-    );
+        width: "100vw",
 
-    gsap.fromTo(
-      document.getElementById("thirdImg"),
-      {
-        marginTop: "50vh",
-        opacity: 0,
+        height: "278vh",
       },
       {
-        marginTop: "0",
-        opacity: 1,
+        width: "150vw",
+        duration: 8,
+        height: "300vh",
+      }
+    );
+    gsap.fromTo(
+      document.getElementById("upperText"),
+      {
+        top: 0,
+        left: "-200vw",
+      },
+      {
+        top: 0,
+        left: "0",
         duration: 1,
-        delay: 1,
+      }
+    );
+    gsap.fromTo(
+      document.getElementById("bottomText"),
+      {
+        top: 0,
+        left: "200vw",
+      },
+      {
+        top: 0,
+        left: "0",
+        duration: 1,
       }
     );
   };
