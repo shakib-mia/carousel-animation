@@ -3,27 +3,51 @@ import React from "react";
 const PageFive = () => {
   return (
     <div className="pageContainer" id="fiveContainer">
-      <div className="pageTextContainer text-white d-flex justify-content-center align-items-center">
-        <div className="pageText col-6 text-center">
-          <h1 className="display-4 fw-bolder">
-            Create your unique inspiring colorways to the latest custom releases
-            from NikeiD
-          </h1>
-          <p className="my-5">
-            Uncode's update is all about new tech innovation and slick design
-            style.
-          </p>
-          <button className="btn btn-outline-danger rounded-pill px-4 py-2">
-            Buy Now - $59
-          </button>
+      <div className="pageTextContainer text-white d-flex justify-content-center align-items-center flex-column">
+        <h1>Contact Us</h1>
+        <div id="contact">
+          <form className="p-4 m-4 shadow">
+            <div className="row">
+              <div className="col-12 col-lg-6 my-3">
+                <input
+                  type="text"
+                  className="form-control bg-light"
+                  placeholder="First Name"
+                />
+              </div>
+              <div className="col-12 col-lg-6 my-3">
+                <input
+                  type="text"
+                  className="form-control bg-light"
+                  placeholder="Last Name"
+                />
+              </div>
+              <div className="col-12 my-3">
+                <input
+                  type="email"
+                  className="form-control bg-light"
+                  placeholder="Enter Your Email"
+                />
+              </div>
+              <div className="col-12 my-3">
+                <textarea
+                  name=""
+                  className="form-control bg-light"
+                  placeholder="Write Your Message Here"
+                  id=""
+                  cols="30"
+                  rows="10"
+                ></textarea>
+              </div>
+            </div>
+            <input
+              type="submit"
+              value="Send Message"
+              className="btn btn-light"
+            />
+          </form>
         </div>
       </div>
-      <img
-        src="https://d3f86pfw66amx.cloudfront.net/uncode/wp-content/uploads/2017/09/andre-hunter-359225-min.webp"
-        alt=""
-        id="imgFive"
-        className="img"
-      />
     </div>
   );
 };
