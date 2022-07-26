@@ -14,9 +14,9 @@ const PageOne = () => {
               Uncode's update is all about new tech innovation and slick design
               style.
             </p>
-            <button className="btn btn-outline-danger rounded-pill px-4 py-2">
+            <a href="#" className="red-button rounded-pill px-4 py-2">
               Buy Now - $59
-            </button>
+            </a>
           </div>
         </div>
         <img

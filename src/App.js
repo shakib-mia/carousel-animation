@@ -18,8 +18,6 @@ function App() {
   const AnimationHandle = () => {
     const item = document.getElementsByClassName("active");
 
-    console.log(item);
-
     const currentPage = document.getElementById(`page${item[0]?.id}`);
 
     console.log(currentPage?.getElementsByClassName("img"));
@@ -55,8 +53,48 @@ function App() {
         width: "100vw",
       },
       {
-        width: "150vw",
-        duration: 5,
+        width: "120vw",
+        duration: 30,
+        delay: 1,
+      }
+    );
+
+    gsap.fromTo(
+      document.getElementById("firstImg"),
+      {
+        marginTop: "50vh",
+        opacity: 0,
+      },
+      {
+        marginTop: "0",
+        opacity: 1,
+        duration: 1,
+      }
+    );
+    gsap.fromTo(
+      document.getElementById("secondImg"),
+      {
+        opacity: 0,
+        top: "50vh",
+      },
+      {
+        opacity: 1,
+        top: "0",
+        duration: 1,
+        delay: 0.5,
+      }
+    );
+
+    gsap.fromTo(
+      document.getElementById("thirdImg"),
+      {
+        marginTop: "50vh",
+        opacity: 0,
+      },
+      {
+        marginTop: "0",
+        opacity: 1,
+        duration: 1,
         delay: 1,
       }
     );
@@ -66,7 +104,7 @@ function App() {
 
   return (
     <div>
-      <div className="rounded"></div>
+      <div className="rounded">+</div>
       <div class="carousel-container justify-content-center fixed-top">
         <div
           id="vertical-carousel"
