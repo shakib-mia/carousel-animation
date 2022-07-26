@@ -1,10 +1,10 @@
-import { useRef } from "react";
+import gsap from "gsap";
 import "./App.css";
-import PageThree from "./Pages/PageThree";
+import Buttons from "./components/Buttons";
+import CarouselInner from "./components/CarouselInner";
+import Indicators from "./components/Indicators";
 
 function App() {
-  const pageTwo = useRef(null);
-
   const moveCursor = (e) => {
     const cursorRounded = document.querySelector(".rounded");
     const mouseY = e.pageY;
@@ -12,15 +12,57 @@ function App() {
 
     cursorRounded.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
   };
+
   window.addEventListener("mousemove", moveCursor);
 
-  window.addEventListener("wheel", (e) => {
-    if (e.wheelDeltaY > 0) {
-      document.getElementById("prevButton").click();
-    } else {
-      document.getElementById("nextButton").click();
-    }
-  });
+  const AnimationHandle = () => {
+    const item = document.getElementsByClassName("active");
+
+    console.log(item);
+
+    const currentPage = document.getElementById(`page${item[0]?.id}`);
+
+    console.log(currentPage?.getElementsByClassName("img"));
+
+    gsap.fromTo(
+      currentPage?.getElementsByClassName("display-4"),
+      {
+        marginTop: "-10vw",
+        opacity: 0,
+      },
+      {
+        marginTop: 0,
+        opacity: 1,
+        duration: 1,
+      }
+    );
+    gsap.fromTo(
+      currentPage?.getElementsByClassName("paragraph"),
+      {
+        marginTop: "100vw",
+        opacity: 0,
+      },
+      {
+        marginTop: 0,
+        opacity: 1,
+        duration: 1,
+      }
+    );
+
+    gsap.fromTo(
+      currentPage?.getElementsByClassName("img"),
+      {
+        width: "100vw",
+      },
+      {
+        width: "150vw",
+        duration: 5,
+        delay: 1,
+      }
+    );
+  };
+
+  setTimeout(AnimationHandle, 1000);
 
   return (
     <div>
@@ -33,79 +75,10 @@ function App() {
           data-bs-interval="false"
           data-bs-wrap="false"
         >
-          <ol class="carousel-indicators">
-            <li
-              data-bs-target="#vertical-carousel"
-              id="one"
-              data-bs-slide-to="0"
-              class="active"
-            ></li>
-            <li
-              data-bs-target="#vertical-carousel"
-              id="two"
-              data-bs-slide-to="1"
-            ></li>
-            <li
-              data-bs-target="#vertical-carousel"
-              id="three"
-              data-bs-slide-to="2"
-            ></li>
-            <li
-              data-bs-target="#vertical-carousel"
-              id="four"
-              data-bs-slide-to="3"
-            ></li>
-            <li
-              data-bs-target="#vertical-carousel"
-              id="five"
-              data-bs-slide-to="4"
-            ></li>
-            <li
-              data-bs-target="#vertical-carousel"
-              id="six"
-              data-bs-slide-to="5"
-            ></li>
-          </ol>
-          <div class="carousel-inner" id="carousel">
-            <div class="carousel-item active" id="pageOne">
-              <PageThree></PageThree>
-            </div>
-            <div class="carousel-item" id="pageTwo" ref={pageTwo}>
-              <PageThree></PageThree>
-            </div>
-            <div class="carousel-item" id="pageThree">
-              <PageThree></PageThree>
-            </div>
-            <div class="carousel-item" id="pageFour">
-              <PageThree></PageThree>
-            </div>
-            <div class="carousel-item" id="pageFive">
-              <PageThree></PageThree>
-            </div>
-            <div class="carousel-item" id="pageSix">
-              <PageThree></PageThree>
-            </div>
-          </div>
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#vertical-carousel"
-            data-bs-slide="prev"
-            id="prevButton"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#vertical-carousel"
-            data-bs-slide="next"
-            id="nextButton"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
+          <Indicators AnimationHandle={AnimationHandle}></Indicators>
+
+          <CarouselInner AnimationHandle={AnimationHandle}></CarouselInner>
+          <Buttons />
         </div>
       </div>
     </div>

@@ -1,11 +1,8 @@
-import React, { useRef } from "react";
+import React from "react";
 
-const PageThree = () => {
-  const imgThree = useRef(null);
-  const threeContainer = useRef(null);
-
+const PageSix = () => {
   return (
-    <div className="pageContainer" id="threeContainer" ref={threeContainer}>
+    <div className="pageContainer" id="sixContainer">
       <div className="pageTextContainer text-white d-flex justify-content-center align-items-center">
         <div className="pageText col-6 text-center">
           <h1 className="display-4 fw-bolder">
@@ -24,12 +21,11 @@ const PageThree = () => {
       <img
         src="https://d3f86pfw66amx.cloudfront.net/uncode/wp-content/uploads/2017/09/andre-hunter-359225-min.webp"
         alt=""
-        ref={imgThree}
-        id="imgThree"
+        id="imgSix"
         className="img"
       />
     </div>
   );
 };
 
-export default PageThree;
+export default PageSix;
