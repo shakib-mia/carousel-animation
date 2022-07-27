@@ -14,22 +14,22 @@ body {
 }
 
 .red-button {
-    background-color: transparent;
-    border: 3px solid #e82a2a;
-    color: #e82a2a;
-}
-
-.red-button:hover {
     background-color: #e82a2a;
     color: white;
     text-decoration: none;
     border: 3px solid #e82a2a;
     transition: all 500ms;
+
+}
+
+.red-button:hover {
+    background-color: transparent;
+    border: 1px solid #e82a2a;
+    color: #e82a2a;
 }
 
 button {
     position: relative !important;
-    z-index: 1032 !important;
 }
 
 .rounded {
@@ -53,6 +53,10 @@ button {
     font-weight: lighter;
 }
 
+#firstContainer:hover .rounded {
+    display: none !important;
+    background: transparent !important;
+}
 
 .img {
     display: flex;
@@ -208,23 +212,24 @@ button {
 
 #rightTwo img {
     width: 100%;
-    height: 29.5vh;
+    height: 29.4vh;
     position: relative;
-}
-
-#rightTop {
-    margin-bottom: 1vh;
 }
 
 .secondCard,
 .thirdCard {
     position: relative;
+}
+
+.thirdCard {
+    margin-top: 10px !important;
 }
 
 .firstCard,
 .secondCard,
 .thirdCard {
     box-shadow: 0 0 5px;
+    cursor: pointer;
 }
 
 .secondCap,
@@ -236,26 +241,18 @@ button {
     background-image: linear-gradient(to top, black, transparent);
 }
 
-.secondCap {
-    bottom: 10px;
-}
-
 
 .firstCard:hover .firstCaption {
     display: none;
-    transition: all 1s ease;
 }
 
 .secondCard:hover .secondCap {
     display: none;
-    transition: all 1s ease;
 }
 
 .thirdCard:hover .thirdCap {
     display: none;
-    transition: all;
 }
-
 
 /* third section */
 
@@ -319,7 +316,7 @@ button {
 
 #fiveContainer .pageTextContainer {
     background-image: linear-gradient(to right, #3276F8, #59C4F9);
-
+    box-shadow: 10px 10px 100px;
 }
 
 

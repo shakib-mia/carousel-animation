@@ -2,7 +2,7 @@ import React from "react";
 
 const PageFour = () => {
   return (
-    <div className="pageContainer" id="fourContainer">
+    <div className="pageContainer" id="firstContainer">
       <div className="pageTextContainer text-white d-flex justify-content-center align-items-center">
         <div className="pageText col-6 text-center">
           <h1 className="display-4 fw-bolder">
@@ -14,7 +14,7 @@ const PageFour = () => {
               Uncode's update is all about new tech innovation and slick design
               style.
             </p>
-            <button className="btn btn-outline-danger rounded-pill px-4 py-2">
+            <button className="red-button rounded-pill px-4 py-2">
               Buy Now - $59
             </button>
           </div>

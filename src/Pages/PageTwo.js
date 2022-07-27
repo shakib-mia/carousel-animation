@@ -5,7 +5,7 @@ const PageTwo = () => {
     <div className="pageContainer" id="threeContainer">
       <div className="container">
         <div className="cards-container">
-          <div className="firstCard">
+          <div className="firstCard custom-card">
             <img
               src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZHJvbmV8ZW58MHx8MHx8&w=1000&q=80"
               alt=""
@@ -19,7 +19,7 @@ const PageTwo = () => {
           </div>
 
           <div id="rightTwo">
-            <div className="secondCard">
+            <div className="secondCard custom-card" id="rightTop">
               <img
                 src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZHJvbmV8ZW58MHx8MHx8&w=1000&q=80"
                 alt=""
@@ -32,7 +32,7 @@ const PageTwo = () => {
               </div>
             </div>
 
-            <div className="thirdCard">
+            <div className="thirdCard custom-card">
               <img
                 src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZHJvbmV8ZW58MHx8MHx8&w=1000&q=80"
                 alt=""

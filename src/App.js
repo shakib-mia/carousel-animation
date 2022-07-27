@@ -98,6 +98,17 @@ function App() {
         duration: 1,
       }
     );
+
+    gsap.fromTo(
+      ".custom-card",
+      {
+        marginTop: "200vw",
+      },
+      {
+        marginTop: 0,
+        duration: 1,
+      }
+    );
   };
 
   setTimeout(AnimationHandle, 1000);

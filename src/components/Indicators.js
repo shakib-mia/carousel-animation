@@ -34,12 +34,6 @@ const Indicators = ({ AnimationHandle }) => {
         id="Five"
         data-bs-slide-to="4"
       ></li>
-      <li
-        onClick={AnimationHandle}
-        data-bs-target="#vertical-carousel"
-        id="Six"
-        data-bs-slide-to="5"
-      ></li>
     </ol>
   );
 };
