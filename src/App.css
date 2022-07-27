@@ -11,6 +11,7 @@ body {
 
 ::selection {
     background-color: #e22f2f;
+    color: white;
 }
 
 .red-button {
@@ -67,6 +68,12 @@ button {
 
 /* carousel style */
 
+
+#firstContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .carousel-inner,
 .carousel,
@@ -129,7 +136,7 @@ button {
     position: fixed;
     top: 95%;
     left: 50%;
-    transform: translate(-50%, -50%) rotate(90deg);
+    /* transform: translate(-50%, -50%) rotate(90deg); */
     z-index: -1;
 }
 
@@ -285,14 +292,13 @@ button {
 
 #latestNewsContainer img {
     position: relative;
-    width: 100%;
+    width: 103%;
     height: 30vh;
     flex-direction: column;
 }
 
 #latestNewsContainer .col {
     position: relative;
-
     height: 30vh;
     overflow: hidden;
 }
@@ -300,7 +306,7 @@ button {
 #latestNewsContainer .caption {
     position: absolute;
     top: 0;
-    width: 95%;
+    width: 98%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
@@ -309,9 +315,31 @@ button {
     justify-content: center;
 }
 
-#latestNewsContainer .col:hover .blogImg {
-    zoom: 150% !important;
+
+/* #latestNewsContainer .col:hover .blogImg {
+    width: 120%;
+    height: 35vh;
     transition: all 1s ease;
+} */
+
+.blog:hover .caption {
+    display: none !important;
+}
+
+.caption {
+    width: 100%;
+}
+
+.blog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blog:hover .blogImg {
+    width: 150% !important;
+    height: 150% !important;
+    transition: all 1s;
 }
 
 #fiveContainer .pageTextContainer {

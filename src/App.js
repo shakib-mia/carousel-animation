@@ -20,7 +20,17 @@ function App() {
 
     const currentPage = document.getElementById(`page${item[0]?.id}`);
 
-    console.log(currentPage?.getElementsByClassName("img"));
+    gsap.fromTo(
+      "#imgFour",
+      {
+        width: "100%",
+        height: "auto",
+      },
+      {
+        width: "150%",
+        duration: 5,
+      }
+    );
 
     gsap.fromTo(
       currentPage?.getElementsByClassName("display-4"),
@@ -48,24 +58,9 @@ function App() {
     );
 
     gsap.fromTo(
-      currentPage?.getElementsByClassName("img"),
-      {
-        width: "100vw",
-        height: "100vh",
-      },
-      {
-        width: "120vw",
-        height: "120vh",
-        duration: 30,
-        delay: 1,
-      }
-    );
-
-    gsap.fromTo(
       document.getElementById("thirdImage"),
       {
         width: "100vw",
-
         height: "278vh",
       },
       {
@@ -106,6 +101,17 @@ function App() {
       },
       {
         marginTop: 0,
+        duration: 1,
+      }
+    );
+
+    gsap.fromTo(
+      ".blog",
+      {
+        top: 0,
+      },
+      {
+        top: "33%",
         duration: 1,
       }
     );
