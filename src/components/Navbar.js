@@ -140,7 +140,7 @@ const Navbar = ({ textColorCondition }) => {
 
     if (
       textColorCondition === "One" ||
-      textColorCondition === "Three" ||
+      textColorCondition === "Two" ||
       textColorCondition === "Five"
     ) {
       setTextColor("text-light");

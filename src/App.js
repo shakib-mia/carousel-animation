@@ -31,7 +31,7 @@ function App() {
       {
         marginTop: 0,
         opacity: 1,
-        duration: 2,
+        duration: 2.5,
       }
     );
     gsap.fromTo(
@@ -43,7 +43,7 @@ function App() {
       {
         paddingTop: 0,
         opacity: 1,
-        duration: 2,
+        duration: 2.5,
       }
     );
 
@@ -85,7 +85,7 @@ function App() {
         {
           top: 0,
           opacity: 1,
-          duration: 1,
+          duration: 0.5,
           scrollTrigger: {
             trigger: "#pricing",
           },
@@ -100,7 +100,7 @@ function App() {
         {
           top: 0,
           opacity: 1,
-          duration: 2,
+          duration: 1,
           scrollTrigger: {
             trigger: "#card1",
           },
@@ -116,7 +116,7 @@ function App() {
         {
           top: 0,
           opacity: 1,
-          duration: 3,
+          duration: 1.5,
           scrollTrigger: {
             trigger: "#card1",
           },
