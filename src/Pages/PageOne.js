@@ -1,19 +1,17 @@
 import React from "react";
 import video from "../../src/Logos/Longtail video 2.mp4";
 
-const PageFour = () => {
+const PageOne = () => {
   return (
-    <div id="firstPageContainer">
+    <div id="firstPageContainer" className="fixed-top">
       <div className="pageContainer" id="firstContainer">
         <div className="pageTextContainer text-white d-flex justify-content-center align-items-center">
           <div className="pageText col-12 col-lg-6 text-center">
-            <h1 className="display-4 fw-bolder">
+            <h1 className="display-4 fw-bolder position-relative">
               Freight Dispatching Simplified
             </h1>
-            <div className="paragraph">
-              <p className="my-5">
-                We increase your profits and decrease your worries
-              </p>
+            <div className="paragraph my-2">
+              <p>We increase your profits and decrease your worries</p>
               <button className="red-button rounded-pill px-4 py-2">
                 Buy Now - $59
               </button>
@@ -29,4 +27,4 @@ const PageFour = () => {
   );
 };
 
-export default PageFour;
+export default PageOne;

@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
 body {
     /* overflow: hidden; */
     height: 700vh;
     overflow-x: hidden;
     position: relative;
+    font-family: Inter;
 }
 
 ::-webkit-scrollbar {
@@ -13,6 +16,11 @@ hr {
     background: white;
 }
 
+.carousel-item-prev:not(.carousel-item-end) {
+    height: 0 !important;
+    transition: all 1s;
+    animation-delay: 0;
+}
 
 ::selection {
     background-color: #e22f2f;
@@ -28,10 +36,20 @@ hr {
 
 }
 
+#card1,
+#card2,
+#card3 {
+    top: 10rem;
+}
+
 .red-button:hover {
     background-color: transparent;
     border: 1px solid #e82a2a;
     color: #e82a2a;
+}
+
+.red-button:hover .rounded-cursor {
+    display: none;
 }
 
 button {
@@ -204,6 +222,11 @@ source {
     visibility: hidden;
 }
 
+
+.carousel-item.active {
+    position: fixed !important;
+    top: 0;
+}
 
 
 /* second page */
@@ -424,6 +447,14 @@ source {
         margin-top: 1vh;
     }
 
+    video .carousel-indicators {
+        display: none;
+    }
+
+    video {
+        height: 150vh !important;
+    }
+
     #pricing {
         padding-top: 10vh;
         background-color: #ddd;
@@ -434,12 +465,8 @@ source {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    video .carousel-indicators {
-        display: none;
-    }
-
     video {
-        height: 150vh;
+        height: 150vh !important;
     }
 
     .blogSection {
@@ -457,6 +484,7 @@ source {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+
     #pricing {
         padding-top: 5vh;
         background-color: #ddd;

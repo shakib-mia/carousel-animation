@@ -1,4 +1,5 @@
 import gsap from "gsap";
+import ScrollSmoother from "gsap";
 import { useEffect, useState } from "react";
 import "./App.css";
 import Buttons from "./components/Buttons";
@@ -19,27 +20,14 @@ function App() {
 
   window.addEventListener("mousemove", moveCursor);
 
-  const AnimationHandle = () => {
+  useEffect(() => {
     const item = document.getElementsByClassName("active");
 
     const currentPage = document.getElementById(`page${item[0]?.id}`);
     setPage(currentPage);
 
     gsap.fromTo(
-      "#imgFour",
-      {
-        width: "100%",
-        height: "150%",
-      },
-      {
-        width: "150%",
-        height: "230%",
-        duration: 5,
-      }
-    );
-
-    gsap.fromTo(
-      currentPage?.getElementsByClassName("display-4"),
+      ".display-4",
       {
         marginTop: "-10vw",
         opacity: 0,
@@ -51,79 +39,124 @@ function App() {
       }
     );
     gsap.fromTo(
-      currentPage?.getElementsByClassName("paragraph"),
+      ".paragraph",
       {
-        marginTop: "100vw",
+        paddingTop: "100vh",
         opacity: 0,
       },
       {
-        marginTop: 0,
+        paddingTop: 0,
         opacity: 1,
         duration: 1,
       }
     );
 
-    gsap.fromTo(
-      document.getElementById("thirdImage"),
-      {
-        width: "100vw",
-        height: "278vh",
-      },
-      {
-        width: "150vw",
-        duration: 8,
-        height: "300vh",
-      }
-    );
-    gsap.fromTo(
-      document.getElementById("upperText"),
-      {
-        top: 0,
-        left: "-200vw",
-      },
-      {
-        top: 0,
-        left: "0",
-        duration: 1,
-      }
-    );
-    gsap.fromTo(
-      document.getElementById("bottomText"),
-      {
-        top: 0,
-        left: "200vw",
-      },
-      {
-        top: 0,
-        left: "0",
-        duration: 1,
-      }
-    );
+    window.addEventListener("scroll", () => {
+      gsap.fromTo(
+        ".display-4",
+        {
+          marginTop: "-10vw",
+          opacity: 0,
+        },
+        {
+          marginTop: 0,
+          opacity: 1,
+          duration: 1,
+        }
+      );
+      gsap.fromTo(
+        ".paragraph",
+        {
+          paddingTop: "100vh",
+          opacity: 0,
+        },
+        {
+          paddingTop: 0,
+          opacity: 1,
+          duration: 1,
+        }
+      );
 
-    gsap.fromTo(
-      ".custom-card",
-      {
-        marginTop: "200vw",
-      },
-      {
-        marginTop: 0,
-        duration: 1,
-      }
-    );
+      gsap.fromTo(
+        "#card1",
+        {
+          top: "10rem",
+          opacity: 0,
+          delay: 1,
+        },
+        {
+          top: 0,
+          opacity: 1,
+          duration: 1,
+          scrollTrigger: {
+            trigger: "#pricing",
+          },
+        }
+      );
+      gsap.fromTo(
+        "#card2",
+        {
+          top: "10rem",
+          opacity: 0,
+        },
+        {
+          top: 0,
+          opacity: 1,
+          duration: 2,
+          scrollTrigger: {
+            trigger: "#card1",
+          },
+          smoothOrigin: true,
+        }
+      );
+      gsap.fromTo(
+        "#card3",
+        {
+          top: "10rem",
+          opacity: 0,
+        },
+        {
+          top: 0,
+          opacity: 1,
+          duration: 3,
+          scrollTrigger: {
+            trigger: "#card1",
+          },
+          smoothOrigin: true,
+        }
+      );
 
-    gsap.fromTo(
-      ".blog",
-      {
-        top: 0,
-      },
-      {
-        top: "33%",
-        duration: 1,
-      }
-    );
-  };
+      gsap.fromTo(
+        "#thirdTextContainer",
+        {
+          top: "100vh",
+          opacity: 0,
+        },
+        {
+          top: "0",
+          duration: 1,
+          opacity: 1,
+          scrollTrigger: {
+            trigger: "#thirdContainer",
+          },
+          smoothOrigin: true,
+        }
+      );
 
-  setTimeout(AnimationHandle, 1000);
+      gsap.fromTo(
+        ".text-center",
+        {
+          marginTop: "20rem",
+          opacity: 0,
+        },
+        {
+          marginTop: 0,
+          duration: 1,
+          opacity: 1,
+        }
+      );
+    });
+  }, []);
 
   return (
     <div>
@@ -137,9 +170,9 @@ function App() {
           data-bs-interval="false"
           data-bs-wrap="false"
         >
-          <Indicators AnimationHandle={AnimationHandle}></Indicators>
+          <Indicators></Indicators>
 
-          <CarouselInner AnimationHandle={AnimationHandle}></CarouselInner>
+          <CarouselInner></CarouselInner>
           <Buttons />
         </div>
       </div>
