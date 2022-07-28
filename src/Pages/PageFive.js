@@ -4,47 +4,45 @@ const PageFive = () => {
   return (
     <div className="pageContainer" id="fiveContainer">
       <div className="pageTextContainer text-white d-flex justify-content-center align-items-center flex-column">
-        <h1>Contact Us</h1>
-        <div id="contact">
-          <form className="p-4 m-4 shadow">
+        <h1>Get In Touch</h1>
+        <div id="contact" className="container">
+          <form className="p-4 p-lg-4 m-lg-4 shadow w-100">
             <div className="row">
-              <div className="col-12 col-lg-6 my-3">
+              <div className="col-12 col-lg-6  d-flex flex-column justify-content-between">
                 <input
+                  className="form-control my-2 p-2"
                   type="text"
-                  className="form-control bg-light"
-                  placeholder="First Name"
+                  placeholder="Name"
                 />
-              </div>
-              <div className="col-12 col-lg-6 my-3">
                 <input
+                  className="form-control my-2 p-2"
                   type="text"
-                  className="form-control bg-light"
-                  placeholder="Last Name"
+                  placeholder="Email Address"
                 />
-              </div>
-              <div className="col-12 my-3">
                 <input
-                  type="email"
-                  className="form-control bg-light"
-                  placeholder="Enter Your Email"
+                  className="form-control my-2 p-2"
+                  type="text"
+                  placeholder="Phone Number"
                 />
               </div>
-              <div className="col-12 my-3">
+              <div className="col-12 col-lg-6 my-2">
                 <textarea
+                  className="form-control p-2"
                   name=""
-                  className="form-control bg-light"
-                  placeholder="Write Your Message Here"
                   id=""
                   cols="30"
-                  rows="10"
+                  rows="8"
+                  placeholder="Text Message"
                 ></textarea>
               </div>
             </div>
-            <input
-              type="submit"
-              value="Send Message"
-              className="btn btn-light"
-            />
+            <div className="text-end">
+              <input
+                type="submit"
+                value="Send Message"
+                className="btn btn-light mt-4 text-center"
+              />
+            </div>
           </form>
         </div>
       </div>

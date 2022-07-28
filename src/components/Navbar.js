@@ -154,7 +154,11 @@ const Navbar = ({ textColorCondition }) => {
   return (
     <nav class="navbar navbar-expand-lg fixed-top" style={{ zIndex: 1032 }}>
       <div class="container-fluid">
-        <a class="text-white col-4 col-lg-1" href="#top" id="logo">
+        <a
+          class="text-white col-4 col-lg-1"
+          onClick={() => clickingSystem("One")}
+          id="logo"
+        >
           <img src={logo} alt="" className="img-responsive" />
         </a>
         <button
@@ -172,25 +176,28 @@ const Navbar = ({ textColorCondition }) => {
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a
-                class={`nav-link ${textColor}`}
-                href="#"
-                onClick={() => clickingSystem("Two")}
+                class={`nav-link ${textColor} cursor-pointer`}
+                onClick={() => clickingSystem("Three")}
               >
                 Services
               </a>
             </li>
             <li class="nav-item">
-              <a class={`nav-link ${textColor}`} href="#">
-                About
-              </a>
+              <a class={`nav-link ${textColor}`}>About</a>
             </li>
             <li class="nav-item">
-              <a class={`nav-link ${textColor}`} href="#">
+              <a
+                class={`nav-link ${textColor}`}
+                onClick={() => clickingSystem("Two")}
+              >
                 Pricing
               </a>
             </li>
             <li class="nav-item">
-              <a class={`nav-link ${textColor}`} href="#">
+              <a
+                class={`nav-link ${textColor}`}
+                onClick={() => clickingSystem("Four")}
+              >
                 Blog
               </a>
             </li>

@@ -1,11 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('http://fonts.cdnfonts.com/css/helvetica-neue-9');
+
 
 body {
     /* overflow: hidden; */
     height: 700vh;
     overflow-x: hidden;
     position: relative;
-    font-family: Inter;
+    font-family: 'Helvetica 65 Medium', sans-serif;
+
+}
+
+.section-heading {
+    font-size: 75px;
+    font-weight: 900;
+}
+
+a.nav-link {
+    cursor: pointer;
 }
 
 ::-webkit-scrollbar {
@@ -23,15 +34,15 @@ hr {
 }
 
 ::selection {
-    background-color: #e22f2f;
+    background-color: #00A1D8;
     color: white;
 }
 
 .red-button {
-    background-color: #e82a2a;
+    background-color: #00A1D8;
     color: white;
     text-decoration: none;
-    border: 3px solid #e82a2a;
+    border: 3px solid #00A1D8;
     transition: all 500ms;
 
 }
@@ -44,8 +55,8 @@ hr {
 
 .red-button:hover {
     background-color: transparent;
-    border: 1px solid #e82a2a;
-    color: #e82a2a;
+    border: 1px solid #00A1D8;
+    color: #00A1D8;
 }
 
 .red-button:hover .rounded-cursor {
@@ -54,13 +65,15 @@ hr {
 
 button {
     position: relative !important;
+    font-size: 16px;
+    padding: 12px 10px
 }
 
 .rounded-cursor {
     pointer-events: none;
     width: 50px;
     height: 50px;
-    background-color: rgba(226, 47, 47, 0.7);
+    background-color: rgba(0, 161, 216, 0.5);
     color: rgba(255, 255, 255);
     border-radius: 50% !important;
     position: relative;
@@ -70,8 +83,8 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 6px;
-    font-size: 25px;
+    padding-top: 12px;
+    font-size: 30px;
     padding-bottom: 10px;
     cursor: default;
     font-weight: lighter;
@@ -84,6 +97,9 @@ button {
     justify-content: center;
 }
 
+.paragraph p {
+    font-size: 24px;
+}
 
 /* carousel style */
 
@@ -156,16 +172,17 @@ button {
 
 .carousel-indicators [data-bs-target] {
     border-radius: 12px;
-    width: 5px;
-    height: 5px;
-    margin-bottom: 5px;
-    border-radius: 50%;
-    background-color: #999;
-}
-
-.carousel-indicators [data-bs-target] li.active {
     width: 7px;
     height: 7px;
+    border-radius: 50%;
+    background-color: #999;
+    margin: 0 auto;
+}
+
+.carousel-indicators li.active {
+    width: 10px;
+    height: 10px;
+    background-color: rgb(174, 174, 174);
 }
 
 .carousel-control-next-icon,
@@ -379,16 +396,16 @@ button {
     flex-direction: column;
 }
 
-#latestNewsContainer .col {
+#latestNewsContainer .blog {
     position: relative;
-    height: 30vh;
+    height: 25vh;
     overflow: hidden;
 }
 
 #latestNewsContainer .caption {
     position: absolute;
     top: 0;
-    width: 98%;
+    width: 96%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
@@ -416,6 +433,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .blog:hover .blogImg {

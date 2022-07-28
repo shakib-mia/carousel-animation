@@ -22,11 +22,36 @@ function App() {
   useEffect(() => {
     const item = document.getElementsByClassName("active");
 
+    gsap.fromTo(
+      ".section-heading",
+      {
+        marginTop: "-10vw",
+        opacity: 0,
+      },
+      {
+        marginTop: 0,
+        opacity: 1,
+        duration: 2,
+      }
+    );
+    gsap.fromTo(
+      ".paragraph",
+      {
+        paddingTop: "100vh",
+        opacity: 0,
+      },
+      {
+        paddingTop: 0,
+        opacity: 1,
+        duration: 2,
+      }
+    );
+
     window.addEventListener("scroll", () => {
       setPage(item[0]?.id);
 
       gsap.fromTo(
-        ".display-4",
+        ".section-heading",
         {
           marginTop: "-10vw",
           opacity: 0,
