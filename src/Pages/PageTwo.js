@@ -1,15 +1,15 @@
-import gsap from "gsap";
 import React from "react";
 
 const PageTwo = () => {
   return (
     <div id="pricing">
       <div className="container pt-sm-5 pt-lg-0 ">
-        <h5 className="text-center mt-5 mt-lg-0">Our Price Table</h5>
-        <h1 className="text-center">Choose the Best Pack</h1>
-        <p className="text-center mb-lg-5">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, esse!
-        </p>
+        <h5 className="thirdHeading text-center mt-5 mt-lg-0">
+          Our Price Table
+        </h5>
+        <h1 className="thirdHeading text-center mb-lg-5">
+          Choose the Best Pack
+        </h1>
 
         <div className="row row-cols-1 row-cols-md-3 row-cols-lg-4 gap-3 justify-content-center text-center">
           <div

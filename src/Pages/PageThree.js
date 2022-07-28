@@ -1,11 +1,7 @@
-import { faUser } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useRef } from "react";
+import React from "react";
 import video from "../../src/Logos/Longtail Logistics 1.mp4";
 
 const PageThree = () => {
-  const threeContainer = useRef(null);
-
   return (
     <div id="firstPageContainer">
       <div className="pageContainer" id="thirdContainer">

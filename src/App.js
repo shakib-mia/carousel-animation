@@ -1,5 +1,4 @@
 import gsap from "gsap";
-import ScrollSmoother from "gsap";
 import { useEffect, useState } from "react";
 import "./App.css";
 import Buttons from "./components/Buttons";
@@ -144,7 +143,7 @@ function App() {
       );
 
       gsap.fromTo(
-        ".text-center",
+        ".thirdHeading",
         {
           marginTop: "20rem",
           opacity: 0,
@@ -156,7 +155,7 @@ function App() {
         }
       );
     });
-  }, []);
+  }, [page]);
 
   return (
     <div>
