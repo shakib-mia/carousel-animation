@@ -10,6 +10,8 @@ import Navbar from "./components/Navbar";
 function App() {
   const [page, setPage] = useState("");
 
+  gsap.registerPlugin(ScrollTrigger);
+
   const moveCursor = (e) => {
     const cursorRounded = document.querySelector(".rounded-cursor");
     const mouseY = e.pageY;
@@ -23,10 +25,11 @@ function App() {
   useEffect(() => {
     const item = document.getElementsByClassName("active");
 
-    const currentPage = document.getElementById(`page${item[0]?.id}`);
-    setPage(currentPage);
-
     window.addEventListener("scroll", () => {
+      const currentPage = document.getElementById(`page${item}`);
+
+      setPage(item[0]?.id);
+
       gsap.fromTo(
         ".display-4",
         {
@@ -135,7 +138,7 @@ function App() {
 
   return (
     <div>
-      <Navbar textColorCondition={page.id}></Navbar>
+      <Navbar textColorCondition={page}></Navbar>
       <div className="rounded-cursor">+</div>
       <div class="carousel-container justify-content-center fixed-top">
         <div

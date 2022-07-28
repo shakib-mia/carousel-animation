@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import WhiteLogo from "../Logos/Horizontal/Vectors/Logo_V1_White.svg";
 import DarkLogo from "../Logos/Horizontal/Vectors/Logo_V1.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = ({ textColorCondition }) => {
   const [textColor, setTextColor] = useState("");
@@ -12,13 +14,12 @@ const Navbar = ({ textColorCondition }) => {
 
   useEffect(() => {
     if (
-      textColorCondition === "pageOne" ||
-      textColorCondition === "pageThree" ||
-      textColorCondition === "pageFive"
+      textColorCondition === "One" ||
+      textColorCondition === "Three" ||
+      textColorCondition === "Five"
     ) {
       setTextColor("text-light");
       setLogo(WhiteLogo);
-      console.log(textColor);
     } else {
       setTextColor("text-dark");
       setLogo(DarkLogo);
@@ -32,7 +33,7 @@ const Navbar = ({ textColorCondition }) => {
           <img src={logo} alt="" className="img-responsive" />
         </a>
         <button
-          class="navbar-toggler text-dark"
+          class={`navbar-toggler ${textColor}`}
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarTogglerDemo02"
@@ -40,10 +41,10 @@ const Navbar = ({ textColorCondition }) => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon "></span>
+          <FontAwesomeIcon icon={faBars}></FontAwesomeIcon>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 bg-white">
             <li class="nav-item">
               <a
                 class={`nav-link ${textColor}`}
