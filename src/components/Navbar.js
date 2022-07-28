@@ -3,6 +3,7 @@ import WhiteLogo from "../Logos/Horizontal/Vectors/Logo_V1_White.svg";
 import DarkLogo from "../Logos/Horizontal/Vectors/Logo_V1.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import gsap from "gsap";
 
 const Navbar = ({ textColorCondition }) => {
   const [textColor, setTextColor] = useState("");
@@ -13,6 +14,130 @@ const Navbar = ({ textColorCondition }) => {
   };
 
   useEffect(() => {
+    const carouselIndicators = document.getElementsByClassName(
+      "carousel-indicators"
+    );
+
+    carouselIndicators[0].childNodes.forEach((indicator) =>
+      indicator.addEventListener("click", () => {
+        gsap.fromTo(
+          ".display-4",
+          {
+            marginTop: "-10vw",
+            opacity: 0,
+          },
+          {
+            marginTop: 0,
+            opacity: 1,
+            duration: 1,
+          }
+        );
+        gsap.fromTo(
+          ".paragraph",
+          {
+            paddingTop: "100vh",
+            opacity: 0,
+          },
+          {
+            paddingTop: 0,
+            opacity: 1,
+            duration: 1,
+          }
+        );
+
+        gsap.fromTo(
+          "#card1",
+          {
+            top: "10rem",
+            opacity: 0,
+            delay: 1,
+          },
+          {
+            top: 0,
+            opacity: 1,
+            duration: 1,
+            scrollTrigger: {
+              trigger: "#pricing",
+            },
+          }
+        );
+        gsap.fromTo(
+          "#card2",
+          {
+            top: "10rem",
+            opacity: 0,
+          },
+          {
+            top: 0,
+            opacity: 1,
+            duration: 2,
+            scrollTrigger: {
+              trigger: "#card1",
+            },
+            smoothOrigin: true,
+          }
+        );
+        gsap.fromTo(
+          "#card3",
+          {
+            top: "10rem",
+            opacity: 0,
+          },
+          {
+            top: 0,
+            opacity: 1,
+            duration: 3,
+            scrollTrigger: {
+              trigger: "#card1",
+            },
+            smoothOrigin: true,
+          }
+        );
+
+        gsap.fromTo(
+          "#thirdTextContainer",
+          {
+            top: "100vh",
+            opacity: 0,
+          },
+          {
+            top: "0",
+            duration: 1,
+            opacity: 1,
+            scrollTrigger: {
+              trigger: "#thirdContainer",
+            },
+            smoothOrigin: true,
+          }
+        );
+
+        gsap.fromTo(
+          ".thirdHeading",
+          {
+            marginTop: "20rem",
+            opacity: 0,
+          },
+          {
+            marginTop: 0,
+            duration: 1,
+            opacity: 1,
+          }
+        );
+
+        if (
+          indicator.id === "One" ||
+          indicator.id === "Three" ||
+          indicator.id === "Five"
+        ) {
+          setTextColor("text-light");
+          setLogo(WhiteLogo);
+        } else {
+          setTextColor("text-dark");
+          setLogo(DarkLogo);
+        }
+      })
+    );
+
     if (
       textColorCondition === "One" ||
       textColorCondition === "Three" ||
@@ -44,7 +169,7 @@ const Navbar = ({ textColorCondition }) => {
           <FontAwesomeIcon icon={faBars}></FontAwesomeIcon>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 bg-white">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a
                 class={`nav-link ${textColor}`}

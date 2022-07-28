@@ -1,5 +1,4 @@
 import gsap from "gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { useEffect, useState } from "react";
 import "./App.css";
 import Buttons from "./components/Buttons";
@@ -8,9 +7,7 @@ import Indicators from "./components/Indicators";
 import Navbar from "./components/Navbar";
 
 function App() {
-  const [page, setPage] = useState("");
-
-  gsap.registerPlugin(ScrollTrigger);
+  const [page, setPage] = useState("One");
 
   const moveCursor = (e) => {
     const cursorRounded = document.querySelector(".rounded-cursor");
@@ -26,8 +23,6 @@ function App() {
     const item = document.getElementsByClassName("active");
 
     window.addEventListener("scroll", () => {
-      const currentPage = document.getElementById(`page${item}`);
-
       setPage(item[0]?.id);
 
       gsap.fromTo(
