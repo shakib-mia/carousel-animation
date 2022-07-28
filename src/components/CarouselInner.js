@@ -9,7 +9,7 @@ const CarouselInner = ({ AnimationHandle }) => {
   window.addEventListener("scroll", AnimationHandle);
 
   return (
-    <div class="carousel-inner" id="carousel">
+    <div>
       <div class="carousel-item active" id="pageOne">
         <PageOne></PageOne>
       </div>

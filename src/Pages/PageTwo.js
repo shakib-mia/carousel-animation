@@ -2,48 +2,31 @@ import React from "react";
 
 const PageTwo = () => {
   return (
-    <div className="pageContainer" id="threeContainer">
-      <div className="container">
-        <div className="cards-container">
-          <div className="firstCard custom-card">
-            <img
-              src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZHJvbmV8ZW58MHx8MHx8&w=1000&q=80"
-              alt=""
-              id="firstImg"
-            />
-            <div className="firstCaption">
-              <h1 className="ps-2 pb-2 ps-lg-5 pb-lg-5">
-                About The Image <br /> Will Go Here
-              </h1>
-            </div>
+    <div id="pricing">
+      <div className="container pt-sm-5 pt-lg-0 ">
+        <h5 className="text-center mt-5 mt-lg-0">Our Price Table</h5>
+        <h1 className="text-center">Choose the Best Pack</h1>
+        <p className="text-center mb-lg-5">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, esse!
+        </p>
+
+        <div className="row row-cols-1 row-cols-md-3 row-cols-lg-4 gap-3 justify-content-center text-center">
+          <div className="col my-auto py-3 py-lg-5 custom-card">
+            <h5>Silver Pack</h5>
+            <h1>$78.00</h1>
+            <p>Per/Month</p>
           </div>
 
-          <div id="rightTwo">
-            <div className="secondCard custom-card" id="rightTop">
-              <img
-                src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZHJvbmV8ZW58MHx8MHx8&w=1000&q=80"
-                alt=""
-                id="rightTop"
-              />
-              <div className="secondCap">
-                <h1 className="ps-2 pb-2 ps-lg-5 pb-lg-5">
-                  About The Image <br /> Will Go Here
-                </h1>
-              </div>
-            </div>
+          <div className="col my-auto py-3 py-lg-5 custom-card">
+            <h5>Gold Pack</h5>
+            <h1 className="text-danger">$174.00</h1>
+            <p>Per/Month</p>
+          </div>
 
-            <div className="thirdCard custom-card">
-              <img
-                src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZHJvbmV8ZW58MHx8MHx8&w=1000&q=80"
-                alt=""
-                id="rightBottom"
-              />
-              <div className="thirdCap">
-                <h1 className="ps-2 pb-2 ps-lg-5 pb-lg-5">
-                  About The Image <br /> Will Go Here
-                </h1>
-              </div>
-            </div>
+          <div className="col my-auto py-3 py-lg-5 custom-card">
+            <h5>Platinum Pack</h5>
+            <h1>$230.00</h1>
+            <p>Per/Month</p>
           </div>
         </div>
       </div>

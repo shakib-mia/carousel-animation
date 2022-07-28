@@ -1,12 +1,16 @@
 import gsap from "gsap";
+import { useEffect, useState } from "react";
 import "./App.css";
 import Buttons from "./components/Buttons";
 import CarouselInner from "./components/CarouselInner";
 import Indicators from "./components/Indicators";
+import Navbar from "./components/Navbar";
 
 function App() {
+  const [page, setPage] = useState("");
+
   const moveCursor = (e) => {
-    const cursorRounded = document.querySelector(".rounded");
+    const cursorRounded = document.querySelector(".rounded-cursor");
     const mouseY = e.pageY;
     const mouseX = e.pageX;
 
@@ -19,15 +23,17 @@ function App() {
     const item = document.getElementsByClassName("active");
 
     const currentPage = document.getElementById(`page${item[0]?.id}`);
+    setPage(currentPage);
 
     gsap.fromTo(
       "#imgFour",
       {
         width: "100%",
-        height: "auto",
+        height: "150%",
       },
       {
         width: "150%",
+        height: "230%",
         duration: 5,
       }
     );
@@ -121,7 +127,8 @@ function App() {
 
   return (
     <div>
-      <div className="rounded">+</div>
+      <Navbar textColorCondition={page.id}></Navbar>
+      <div className="rounded-cursor">+</div>
       <div class="carousel-container justify-content-center fixed-top">
         <div
           id="vertical-carousel"
