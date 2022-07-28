@@ -1,4 +1,5 @@
 import gsap from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { useEffect, useState } from "react";
 import "./App.css";
 import Buttons from "./components/Buttons";
@@ -24,31 +25,6 @@ function App() {
 
     const currentPage = document.getElementById(`page${item[0]?.id}`);
     setPage(currentPage);
-
-    gsap.fromTo(
-      ".display-4",
-      {
-        marginTop: "-10vw",
-        opacity: 0,
-      },
-      {
-        marginTop: 0,
-        opacity: 1,
-        duration: 1,
-      }
-    );
-    gsap.fromTo(
-      ".paragraph",
-      {
-        paddingTop: "100vh",
-        opacity: 0,
-      },
-      {
-        paddingTop: 0,
-        opacity: 1,
-        duration: 1,
-      }
-    );
 
     window.addEventListener("scroll", () => {
       gsap.fromTo(

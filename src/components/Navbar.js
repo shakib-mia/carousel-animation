@@ -6,6 +6,10 @@ const Navbar = ({ textColorCondition }) => {
   const [textColor, setTextColor] = useState("");
   const [logo, setLogo] = useState("");
 
+  const clickingSystem = (id) => {
+    document.getElementById(id).click();
+  };
+
   useEffect(() => {
     if (
       textColorCondition === "pageOne" ||
@@ -14,6 +18,7 @@ const Navbar = ({ textColorCondition }) => {
     ) {
       setTextColor("text-light");
       setLogo(WhiteLogo);
+      console.log(textColor);
     } else {
       setTextColor("text-dark");
       setLogo(DarkLogo);
@@ -40,7 +45,11 @@ const Navbar = ({ textColorCondition }) => {
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class={`nav-link ${textColor}`} href="#">
+              <a
+                class={`nav-link ${textColor}`}
+                href="#"
+                onClick={() => clickingSystem("Two")}
+              >
                 Services
               </a>
             </li>

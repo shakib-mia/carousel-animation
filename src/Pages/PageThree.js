@@ -7,7 +7,7 @@ const PageThree = () => {
       <div className="pageContainer" id="thirdContainer">
         <div className="pageTextContainer text-white d-flex justify-content-center align-items-center">
           <figure
-            class="text-center col-6 position-relative"
+            class="text-center col-11 col-lg-6 position-relative"
             id="thirdTextContainer"
           >
             <div id="quotation" className="position-relative">

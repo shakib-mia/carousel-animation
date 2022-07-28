@@ -19,7 +19,7 @@ const PageOne = () => {
           </div>
         </div>
 
-        <video autoplay="autoplay" muted loop>
+        <video autoplay="autoplay" muted loop width="1024">
           <source src={video} type="video/mp4" />
         </video>
       </div>

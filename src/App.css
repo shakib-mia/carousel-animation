@@ -113,11 +113,6 @@ button {
     height: 100vh;
 }
 
-video,
-source {
-    height: 120vh !important;
-    width: 100vw !important;
-}
 
 .carousel-inner,
 .carousel,
@@ -451,8 +446,10 @@ source {
         display: none;
     }
 
-    video {
-        height: 150vh !important;
+    video,
+    source {
+        height: 100vh !important;
+        width: 500vw !important;
     }
 
     #pricing {
@@ -465,9 +462,6 @@ source {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    video {
-        height: 150vh !important;
-    }
 
     .blogSection {
         margin-top: 12vh;
@@ -478,6 +472,12 @@ source {
         background-color: #ddd;
         height: 100vh;
         padding: 10px;
+    }
+
+    video,
+    source {
+        height: 120vh !important;
+        width: 300vw !important;
     }
 
 }
@@ -491,6 +491,11 @@ source {
         height: 100vh;
     }
 
+    video,
+    source {
+        height: 120vh !important;
+        width: 300vw !important;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -515,6 +520,13 @@ source {
         background-color: #ddd;
         height: 100vh;
 
+    }
+
+
+    video,
+    source {
+        height: 120vh !important;
+        width: 300vw !important;
     }
 
 }
