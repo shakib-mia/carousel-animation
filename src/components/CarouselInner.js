@@ -1,5 +1,6 @@
 import React from "react";
 import About from "../Pages/About";
+import Footer from "../Pages/Footer";
 import PageFive from "../Pages/PageFive";
 import PageFour from "../Pages/PageFour";
 import PageOne from "../Pages/PageOne";
@@ -27,6 +28,9 @@ const CarouselInner = () => {
       </div>
       <div class="carousel-item position-absolute" id="pageFive">
         <PageFive></PageFive>
+      </div>
+      <div class="carousel-item position-absolute" id="seven">
+        <Footer></Footer>
       </div>
     </div>
   );

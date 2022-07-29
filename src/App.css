@@ -2,12 +2,15 @@
 
 
 body {
-    /* overflow: hidden; */
     height: 700vh;
     overflow-x: hidden;
     position: relative;
     font-family: 'Helvetica 65 Medium', sans-serif;
 
+}
+
+.bg-lightblue {
+    background-color: #f9faff;
 }
 
 @keyframes transform {
@@ -21,7 +24,7 @@ body {
 }
 
 .carousel-item {
-    transition: transform 1s ease,
+    transition: transform 1.5s ease,
 }
 
 .fa {
@@ -298,9 +301,7 @@ button {
 
 /* second page */
 
-#pricing h1 {
-    font-size: 48px;
-}
+
 
 #pricing h5 {
     font-size: 28px;
@@ -500,6 +501,9 @@ figcaption {
     transition: all 0.5s;
 }
 
+.blog:hover {
+    color: white;
+}
 
 
 .caption {
@@ -547,9 +551,31 @@ textarea {
     height: 100vh;
 }
 
+footer {
+    background-color: #f9faff;
+    width: 100vw;
+    height: 98vh;
+    padding-top: 15vh;
+}
+
+.footer-blog {
+    height: 100vh;
+    overflow: scroll;
+}
+
+p.fixed-bottom {
+    background-color: #f9faff;
+    margin-bottom: 0;
+    text-align: justify;
+}
+
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+    #pricing h1 {
+        font-size: 28px;
+    }
+
     .carousel-indicators {
         display: none;
     }
@@ -590,6 +616,10 @@ textarea {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+    #pricing h1 {
+        font-size: 28px;
+    }
+
     .carousel-indicators {
         right: 3%;
     }
@@ -627,11 +657,17 @@ textarea {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+    #pricing h1 {
+        font-size: 48px;
+    }
+
 
     .bg-overlay {
         padding-top: 5vh;
         height: 100vh;
     }
+
+
 
     video,
     source {
@@ -657,9 +693,12 @@ textarea {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+
+
     .carousel-indicators {
         display: block;
     }
+
 
     #thirdCaption .container {
         margin-top: 18vh;

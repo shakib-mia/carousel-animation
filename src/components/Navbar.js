@@ -6,9 +6,11 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import gsap from "gsap";
 
 const Navbar = ({ textColorCondition }) => {
-  const [textColor, setTextColor] = useState("text-light");
+  const [textColor, setTextColor] = useState("text-white");
   const [logo, setLogo] = useState("");
   const [button, setButton] = useState("red-button");
+  const [togglerColor, setToggler] = useState("text-white");
+  const [navbarBg, setNavbarBg] = useState("bg-transparent");
 
   const navbarScrolling = () => {
     if (
@@ -17,18 +19,36 @@ const Navbar = ({ textColorCondition }) => {
       textColorCondition === "Four" ||
       textColorCondition === "Six"
     ) {
-      setTextColor("text-light");
+      setTextColor("text-white");
       setLogo(WhiteLogo);
       setButton("red-button");
+      setToggler("text-white");
+      setNavbarBg("bg-transparent");
     } else {
       setButton("red-button-alt");
       setTextColor("text-dark");
       setLogo(DarkLogo);
+      setToggler("text-dark");
+      setNavbarBg("bg-lightblue");
     }
   };
+
   const clickingSystem = (id) => {
     document.getElementById(id).click();
     navbarScrolling();
+    if (id === "One" || id === "Three" || id === "Four" || id === "Six") {
+      setTextColor("text-white");
+      setLogo(WhiteLogo);
+      setButton("red-button");
+      setToggler("text-white");
+      setNavbarBg("bg-transparent");
+    } else {
+      setButton("red-button-alt");
+      setTextColor("text-dark");
+      setLogo(DarkLogo);
+      setToggler("text-dark");
+      setNavbarBg("bg-lightblue");
+    }
   };
 
   useEffect(() => {
@@ -148,8 +168,11 @@ const Navbar = ({ textColorCondition }) => {
   }, [textColorCondition]);
 
   return (
-    <nav class="navbar navbar-expand-lg fixed-top" style={{ zIndex: 1032 }}>
-      <div class="container-fluid px-5 pt-3">
+    <nav
+      class={`navbar navbar-expand-lg fixed-top ${navbarBg}`}
+      style={{ zIndex: 1032 }}
+    >
+      <div class="container-fluid px-0 px-lg-5 pt-3">
         <a
           class="text-white col-4 col-lg-2"
           onClick={() => clickingSystem("One")}
@@ -158,7 +181,7 @@ const Navbar = ({ textColorCondition }) => {
           <img src={logo} alt="" className="img-responsive w-75" />
         </a>
         <button
-          class={`navbar-toggler ${textColor}`}
+          class={`navbar-toggler ${togglerColor}`}
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarTogglerDemo02"
@@ -168,8 +191,8 @@ const Navbar = ({ textColorCondition }) => {
         >
           <FontAwesomeIcon icon={faBars}></FontAwesomeIcon>
         </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <div class="collapse navbar-collapse w-100" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 ">
             <li class="nav-item">
               <a
                 class={`nav-link px-4 ${textColor}`}

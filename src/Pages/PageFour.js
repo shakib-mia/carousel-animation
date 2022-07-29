@@ -51,7 +51,7 @@ const PageFour = () => {
           </a>
         </div>
       </div>
-      <a href="#" className="red-button btn rounded-pill px-4">
+      <a href="#" className="red-button-alt btn rounded-pill px-4 mt-4">
         The Blog
       </a>
     </div>

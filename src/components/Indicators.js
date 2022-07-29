@@ -34,6 +34,11 @@ const Indicators = () => {
         id="Six"
         data-bs-slide-to="5"
       ></li>
+      <li
+        data-bs-target="#vertical-carousel"
+        id="Footer"
+        data-bs-slide-to="6"
+      ></li>
     </ol>
   );
 };

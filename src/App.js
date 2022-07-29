@@ -49,7 +49,7 @@ function App() {
 
     window.addEventListener("scroll", () => {
       setPage(item[0]?.id);
-
+      console.log(document.getElementsByClassName("active"));
       gsap.fromTo(
         ".section-heading",
         {
