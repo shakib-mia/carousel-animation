@@ -10,9 +10,37 @@ body {
 
 }
 
+@keyframes transform {
+    from {
+        height: 100vh;
+    }
+
+    to {
+        height: 0;
+    }
+}
+
+.carousel-item {
+    transition: transform 1s ease,
+}
+
+.fa {
+    font-size: 50px;
+    color: #00A1D8;
+}
+
+.navbar .nav-link {
+    font-family: 'Helvetica 65 Medium', sans-serif;
+    font-size: 20px !important;
+}
+
 .section-heading {
     font-size: 75px;
     font-weight: 900;
+}
+
+.sectionHeading {
+    font-size: 48px;
 }
 
 a.nav-link {
@@ -44,7 +72,22 @@ hr {
     text-decoration: none;
     border: 3px solid #00A1D8;
     transition: all 500ms;
+    font-size: 16px;
+}
 
+.red-button-alt {
+    background-color: #00A1D8;
+    color: white;
+    text-decoration: none;
+    border: 3px solid #00A1D8;
+    transition: all 500ms;
+    font-size: 16px;
+}
+
+.red-button-alt:hover {
+    background-color: transparent;
+
+    color: #00A1D8;
 }
 
 #card1,
@@ -55,8 +98,8 @@ hr {
 
 .red-button:hover {
     background-color: transparent;
-    border: 1px solid #00A1D8;
-    color: #00A1D8;
+    border: 3px solid #fff;
+    color: rgb(255, 255, 255);
 }
 
 .red-button:hover .rounded-cursor {
@@ -103,25 +146,25 @@ button {
 
 /* carousel style */
 
+.custom-card p {
+    color: #ffffff80;
+}
 
 #pricing {
-    background-image: url("./Logos/light-pattern.png");
+    background-image: url("./Logos/grain.png");
     height: 100vh;
 }
 
 .bg-overlay {
     height: 100vh;
     width: 100vw;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #141e30;
 }
 
 #pricing .col {
-    background-color: #fff;
-    box-shadow: 0px 0px 10px #555;
-    padding: 30px 0;
-    text-align: center;
+    color: white;
+    padding: 42px 0;
     border-radius: 10px;
-    box-shadow: 0 0 10px #aaa;
 }
 
 #firstContainer {
@@ -242,6 +285,11 @@ button {
 }
 
 
+.paragraph p {
+    letter-spacing: 3px;
+}
+
+
 .carousel-item.active {
     position: fixed !important;
     top: 0;
@@ -251,7 +299,7 @@ button {
 /* second page */
 
 #pricing h1 {
-    font-size: 40px;
+    font-size: 48px;
 }
 
 #pricing h5 {
@@ -262,7 +310,7 @@ button {
 
 .secondHeading {
     font-weight: bold;
-    font-size: 35px;
+    font-size: 48px;
 }
 
 .cards-container img {
@@ -400,7 +448,18 @@ button {
     z-index: 100;
 }
 
+.blockquote h1 {
+    font-size: 60px;
+    font-weight: 700;
+}
 
+figcaption {
+    font-size: 20px !important;
+}
+
+#quote-para {
+    font-size: 22px;
+}
 
 #upperText,
 #bottomText {
@@ -409,67 +468,84 @@ button {
 }
 
 
+#about img {
+    height: 50vh;
+}
+
 /* latest news container */
 
-#latestNewsContainer img {
-    position: relative;
-    width: 103%;
-    height: 30vh;
-    flex-direction: column;
-}
-
-#latestNewsContainer .blog {
-    position: relative;
-    height: 25vh;
-    overflow: hidden;
-}
-
-#latestNewsContainer .caption {
-    position: absolute;
-    top: 0;
-    width: 96%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-/* #latestNewsContainer .col:hover .blogImg {
-    width: 120%;
-    height: 35vh;
-    transition: all 1s ease;
-} */
-
-.blog:hover .caption {
-    display: none !important;
-}
-
-.caption {
-    width: 100%;
+#pageFour {
+    background-color: #f9faff;
 }
 
 .blog {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+    display: inline-block;
+    position: relative;
+    padding: 0;
+    color: white;
+    overflow: hidden;
+    box-shadow: 0 0 5px #333;
 }
+
+.blogImg {
+    width: 100%;
+    height: 120%;
+    position: relative;
+    top: -2vh;
+}
+
 
 .blog:hover .blogImg {
-    width: 150% !important;
-    height: 150% !important;
-    transition: all 1s;
+    transform: scale(1.2);
+    transition: all 0.5s;
 }
 
-#fiveContainer .pageTextContainer {
-    background-image: linear-gradient(to right, #3276F8, #59C4F9);
+
+
+.caption {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(transparent, rgba(0, 0, 0, 90%));
+    display: flex;
+    align-items: flex-end;
+    font-weight: 900;
+}
+
+
+.caption h3 {
+    font-weight: 600;
+}
+
+#fiveContainer {
+    background-color: rgba(20, 30, 48, 0.5);
     box-shadow: 10px 10px 100px;
 }
 
+.contact {
+    background-image: url("./Logos/Long-Tail.webp");
+    background-size: cover;
+}
 
+form {
+    border-radius: 20px;
+}
+
+input {
+    border-radius: 50px !important;
+}
+
+textarea {
+    border-radius: 20px !important;
+}
+
+
+#about {
+    background-color: #f9faff;
+    width: 100vw;
+    height: 100vh;
+}
 
 
 /* Extra small devices (phones, 600px and down) */
@@ -481,6 +557,11 @@ button {
     .blogSection {
         margin-top: 1vh;
     }
+
+    .blog {
+        height: 20vh;
+    }
+
 
     video .carousel-indicators {
         display: none;
@@ -496,20 +577,36 @@ button {
         padding-top: 10vh;
         background-color: #ddd;
         height: 100vh;
-        padding: 25px;
+        padding: 0;
+    }
+
+    .blog-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 1vh;
+        justify-content: center;
     }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+    .carousel-indicators {
+        right: 3%;
+    }
 
     .blogSection {
-        margin-top: 12vh;
+        margin-top: 1vh;
+        height: 100vh;
+    }
+
+    .blog {
+        width: 20vw;
+        height: 30vh;
     }
 
     .bg-overlay {
         padding-top: 10vh;
-        background-color: rgba(0, 0, 0, 0.7);
+
         height: 100vh;
         padding: 10px;
     }
@@ -520,6 +617,12 @@ button {
         width: 300vw !important;
     }
 
+    .blog-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: .5em;
+        justify-content: center;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -527,7 +630,6 @@ button {
 
     .bg-overlay {
         padding-top: 5vh;
-        background-color: rgba(21, 21, 21, .91);
         height: 100vh;
     }
 
@@ -535,6 +637,18 @@ button {
     source {
         height: 120vh !important;
         width: 300vw !important;
+    }
+
+    .blog-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2em;
+        justify-content: center;
+    }
+
+    .blog {
+        width: 45vw;
+        height: 30vh;
     }
 }
 
@@ -552,7 +666,7 @@ button {
     }
 
     .blogSection {
-        margin-top: 29vh;
+        margin-top: 18vh;
     }
 
     .bg-overlay {
@@ -566,6 +680,18 @@ button {
     source {
         height: 140vh !important;
         width: 300vw !important;
+    }
+
+    .blog-container {
+        display: flex;
+        /* grid-template-columns: repeat(3, 1fr); */
+        grid-gap: 10px;
+        justify-content: center;
+    }
+
+    .blog {
+        width: 23vw;
+        height: 35vh;
     }
 
 }

@@ -153,6 +153,53 @@ function App() {
           opacity: 1,
         }
       );
+
+      gsap.fromTo(
+        "#contactHeader",
+        {
+          top: "50vh",
+        },
+        {
+          top: "0vh",
+          duration: 1,
+          smoothOrigin: true,
+        }
+      );
+      gsap.fromTo(
+        "#contact",
+        {
+          top: "70vh",
+        },
+        {
+          top: "0vh",
+          duration: 1,
+          delay: 1,
+          smoothOrigin: true,
+        }
+      );
+
+      gsap.fromTo(
+        "#about-text",
+        {
+          left: "110vw",
+        },
+        {
+          left: 0,
+          duration: 1,
+          smoothOrigin: true,
+        }
+      );
+      gsap.fromTo(
+        "#about-img",
+        {
+          left: "-110vw",
+        },
+        {
+          left: 0,
+          duration: 1,
+          smoothOrigin: true,
+        }
+      );
     });
   }, [page]);
 

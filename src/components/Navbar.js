@@ -6,11 +6,29 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import gsap from "gsap";
 
 const Navbar = ({ textColorCondition }) => {
-  const [textColor, setTextColor] = useState("");
+  const [textColor, setTextColor] = useState("text-light");
   const [logo, setLogo] = useState("");
+  const [button, setButton] = useState("red-button");
 
+  const navbarScrolling = () => {
+    if (
+      textColorCondition === "One" ||
+      textColorCondition === "Three" ||
+      textColorCondition === "Four" ||
+      textColorCondition === "Six"
+    ) {
+      setTextColor("text-light");
+      setLogo(WhiteLogo);
+      setButton("red-button");
+    } else {
+      setButton("red-button-alt");
+      setTextColor("text-dark");
+      setLogo(DarkLogo);
+    }
+  };
   const clickingSystem = (id) => {
     document.getElementById(id).click();
+    navbarScrolling();
   };
 
   useEffect(() => {
@@ -123,43 +141,21 @@ const Navbar = ({ textColorCondition }) => {
             opacity: 1,
           }
         );
-
-        if (
-          indicator.id === "One" ||
-          indicator.id === "Three" ||
-          indicator.id === "Five"
-        ) {
-          setTextColor("text-light");
-          setLogo(WhiteLogo);
-        } else {
-          setTextColor("text-dark");
-          setLogo(DarkLogo);
-        }
       })
     );
 
-    if (
-      textColorCondition === "One" ||
-      textColorCondition === "Two" ||
-      textColorCondition === "Five"
-    ) {
-      setTextColor("text-light");
-      setLogo(WhiteLogo);
-    } else {
-      setTextColor("text-dark");
-      setLogo(DarkLogo);
-    }
+    navbarScrolling();
   }, [textColorCondition]);
 
   return (
     <nav class="navbar navbar-expand-lg fixed-top" style={{ zIndex: 1032 }}>
-      <div class="container-fluid">
+      <div class="container-fluid px-5 pt-3">
         <a
-          class="text-white col-4 col-lg-1"
+          class="text-white col-4 col-lg-2"
           onClick={() => clickingSystem("One")}
           id="logo"
         >
-          <img src={logo} alt="" className="img-responsive" />
+          <img src={logo} alt="" className="img-responsive w-75" />
         </a>
         <button
           class={`navbar-toggler ${textColor}`}
@@ -176,36 +172,45 @@ const Navbar = ({ textColorCondition }) => {
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a
-                class={`nav-link ${textColor} cursor-pointer`}
+                class={`nav-link px-4 ${textColor}`}
                 onClick={() => clickingSystem("Three")}
               >
                 Services
               </a>
             </li>
             <li class="nav-item">
-              <a class={`nav-link ${textColor}`}>About</a>
+              <a
+                onClick={() => clickingSystem("Two")}
+                class={`nav-link px-4 ${textColor}`}
+              >
+                About
+              </a>
             </li>
             <li class="nav-item">
               <a
-                class={`nav-link ${textColor}`}
-                onClick={() => clickingSystem("Two")}
+                class={`nav-link px-4 ${textColor}`}
+                onClick={() => clickingSystem("Three")}
               >
                 Pricing
               </a>
             </li>
             <li class="nav-item">
               <a
-                class={`nav-link ${textColor}`}
-                onClick={() => clickingSystem("Four")}
+                class={`nav-link px-4 ${textColor}`}
+                onClick={() => clickingSystem("Five")}
               >
                 Blog
               </a>
             </li>
           </ul>
           <form class="d-flex">
-            <button class="red-button rounded-pill px-4 py-2">
+            <a
+              href="#fiveContainer"
+              onClick={() => clickingSystem("Five")}
+              class={`${button} rounded-pill px-4 py-2`}
+            >
               Get Started
-            </button>
+            </a>
           </form>
         </div>
       </div>

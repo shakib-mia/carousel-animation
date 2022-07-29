@@ -11,7 +11,7 @@ const PageThree = () => {
             id="thirdTextContainer"
           >
             <div id="quotation" className="position-relative">
-              <blockquote class="blockquote ">
+              <blockquote class="blockquote">
                 <h1>
                   Behind every great leader there was an even greater
                   logistician.
