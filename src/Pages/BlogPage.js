@@ -4,7 +4,7 @@ import FooterImg from "../Logos/Footerwebp.webp";
 const BlogPage = () => {
   return (
     <div className="container h-100 pt-3">
-      <img src={FooterImg} className="col-12 h-50" alt="" />
+      <img src={FooterImg} className="col-12 rounded mt-2" alt="" />
       <div className="py-5 text-center">
         <h1 className="sectionHeading fw-bold">
           Everyday inspired by the Beauty of the Mountains

@@ -15,7 +15,7 @@ const PageFour = () => {
               alt=""
               className="blogImg img-fluid"
             />
-            <div className="caption text-start px-4 pb-3">
+            <div className="caption text-start px-2 pb-1 px-lg-4 pb-lg-3">
               <div>
                 <small>25.03.2020</small>
                 <h3>
@@ -30,7 +30,7 @@ const PageFour = () => {
               alt=""
               className="blogImg img-fluid"
             />
-            <div className="caption text-start px-4 pb-3">
+            <div className="caption text-start px-2 pb-1 px-lg-4 pb-lg-3">
               <div>
                 <small>22.03.2020</small>
                 <h3>Supreme: Redefine The Rule Of StreetWear</h3>
@@ -43,7 +43,7 @@ const PageFour = () => {
               alt=""
               className="blogImg img-fluid"
             />
-            <div className="caption text-start px-4 pb-3">
+            <div className="caption text-start px-2 pb-1 px-lg-4 pb-lg-3">
               <div>
                 <small>20.03.2020</small>
                 <h3>Van Schneider X Unsplash Sweatshirt</h3>

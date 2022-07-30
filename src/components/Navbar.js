@@ -234,7 +234,7 @@ const Navbar = ({ textColorCondition }) => {
           <form class="d-flex">
             <a
               href="#fiveContainer"
-              onClick={() => clickingSystem("Five")}
+              onClick={() => clickingSystem("Six")}
               class={`${button} rounded-pill px-4 py-2`}
             >
               Get Started

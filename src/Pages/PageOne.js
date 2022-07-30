@@ -12,7 +12,10 @@ const PageOne = () => {
             </h1>
             <div className="paragraph my-2">
               <p>We increase your profits and decrease your worries</p>
-              <button className="red-button rounded-pill px-5 py-3">
+              <button
+                onClick={() => document.getElementById("Six").click()}
+                className="red-button rounded-pill px-5 py-3"
+              >
                 Get Started
               </button>
             </div>
