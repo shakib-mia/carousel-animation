@@ -4,6 +4,7 @@ import DarkLogo from "../Logos/Horizontal/Vectors/Logo_V1.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import gsap from "gsap";
+import { Link } from "react-router-dom";
 
 const Navbar = ({ textColorCondition }) => {
   const [textColor, setTextColor] = useState("text-white");
@@ -56,7 +57,7 @@ const Navbar = ({ textColorCondition }) => {
       "carousel-indicators"
     );
 
-    carouselIndicators[0].childNodes.forEach((indicator) =>
+    carouselIndicators[0]?.childNodes.forEach((indicator) =>
       indicator.addEventListener("click", () => {
         gsap.fromTo(
           ".display-4",
@@ -173,13 +174,14 @@ const Navbar = ({ textColorCondition }) => {
       style={{ zIndex: 1032 }}
     >
       <div class="container-fluid px-0 px-lg-5 pt-3">
-        <a
+        <Link
+          to="/"
           class="text-white col-4 col-lg-2"
           onClick={() => clickingSystem("One")}
           id="logo"
         >
           <img src={logo} alt="" className="img-responsive w-75" />
-        </a>
+        </Link>
         <button
           class={`navbar-toggler ${togglerColor}`}
           type="button"

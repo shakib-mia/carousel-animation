@@ -1,10 +1,13 @@
 import gsap from "gsap";
 import { useEffect, useState } from "react";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Buttons from "./components/Buttons";
 import CarouselInner from "./components/CarouselInner";
 import Indicators from "./components/Indicators";
 import Navbar from "./components/Navbar";
+import BlogPage from "./Pages/BlogPage";
+import HomePage from "./Pages/HomePage";
 
 function App() {
   const [page, setPage] = useState("One");
@@ -49,7 +52,6 @@ function App() {
 
     window.addEventListener("scroll", () => {
       setPage(item[0]?.id);
-      console.log(document.getElementsByClassName("active"));
       gsap.fromTo(
         ".section-heading",
         {
@@ -119,6 +121,55 @@ function App() {
           duration: 1.5,
           scrollTrigger: {
             trigger: "#card1",
+          },
+          smoothOrigin: true,
+        }
+      );
+
+      gsap.fromTo(
+        "#blog-1",
+        {
+          top: "10rem",
+          opacity: 0,
+          delay: 1,
+        },
+        {
+          top: 0,
+          opacity: 1,
+          duration: 0.5,
+          scrollTrigger: {
+            trigger: "#latestNewsContainer",
+          },
+        }
+      );
+      gsap.fromTo(
+        "#blog-2",
+        {
+          top: "10rem",
+          opacity: 0,
+        },
+        {
+          top: 0,
+          opacity: 1,
+          duration: 1,
+          scrollTrigger: {
+            trigger: "#latestNewsContainer",
+          },
+          smoothOrigin: true,
+        }
+      );
+      gsap.fromTo(
+        "#blog-3",
+        {
+          top: "10rem",
+          opacity: 0,
+        },
+        {
+          top: 0,
+          opacity: 1,
+          duration: 1.5,
+          scrollTrigger: {
+            trigger: "#latestNewsContainer",
           },
           smoothOrigin: true,
         }
@@ -200,27 +251,36 @@ function App() {
           smoothOrigin: true,
         }
       );
+
+      gsap.fromTo(
+        "blogButton",
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          duration: 1,
+          delay: 3,
+          scrollTrigger: {
+            trigger: "#latestNewsContainer",
+          },
+        }
+      );
     });
   }, [page]);
-
   return (
     <div>
       <Navbar textColorCondition={page}></Navbar>
-      <div className="rounded-cursor">+</div>
-      <div class="carousel-container justify-content-center fixed-top">
-        <div
-          id="vertical-carousel"
-          class="carousel slide"
-          data-bs-ride="carousel"
-          data-bs-interval="false"
-          data-bs-wrap="false"
-        >
-          <Indicators></Indicators>
-
-          <CarouselInner></CarouselInner>
-          <Buttons />
-        </div>
-      </div>
+      <Routes>
+        <Route
+          path="/"
+          element={<HomePage setPage={setPage}></HomePage>}
+        ></Route>
+        <Route path="/blog" element={<BlogPage></BlogPage>}></Route>
+      </Routes>
+      <p className="text-center fixed-bottom py-2 bg-dark text-white">
+        &copy; 2022 All Rights Reserved by Longtail Logistics
+      </p>
     </div>
   );
 }

@@ -9,6 +9,11 @@ body {
 
 }
 
+
+.navbar {
+    transition: all 1s;
+}
+
 .bg-lightblue {
     background-color: #f9faff;
 }
@@ -27,10 +32,7 @@ body {
     transition: transform 1.5s ease,
 }
 
-.fa {
-    font-size: 50px;
-    color: #00A1D8;
-}
+
 
 .navbar .nav-link {
     font-family: 'Helvetica 65 Medium', sans-serif;
@@ -302,13 +304,6 @@ button {
 /* second page */
 
 
-
-#pricing h5 {
-    font-size: 28px;
-    font-family: Helvetica;
-    font-weight: bold;
-}
-
 .secondHeading {
     font-weight: bold;
     font-size: 48px;
@@ -554,7 +549,7 @@ textarea {
 footer {
     background-color: #f9faff;
     width: 100vw;
-    height: 98vh;
+    height: 100%;
     padding-top: 15vh;
 }
 
@@ -576,18 +571,28 @@ p.fixed-bottom {
         font-size: 28px;
     }
 
+    #pricing h5 {
+        font-size: 22px;
+        font-family: Helvetica;
+        font-weight: bold;
+    }
+
     .carousel-indicators {
         display: none;
     }
 
     .blogSection {
-        margin-top: 1vh;
+        margin-top: 10vh;
     }
 
     .blog {
         height: 20vh;
     }
 
+    .fa {
+        font-size: 30px;
+        color: #00A1D8;
+    }
 
     video .carousel-indicators {
         display: none;
@@ -620,18 +625,30 @@ p.fixed-bottom {
         font-size: 28px;
     }
 
+    #pricing h5 {
+        font-size: 25px;
+        font-family: Helvetica;
+        font-weight: bold;
+    }
+
     .carousel-indicators {
         right: 3%;
     }
 
     .blogSection {
-        margin-top: 1vh;
+        margin-top: 8vh;
         height: 100vh;
     }
 
     .blog {
-        width: 20vw;
-        height: 30vh;
+        width: 85vw;
+        height: 23vh;
+        margin: 0 auto;
+    }
+
+    .fa {
+        font-size: 30px;
+        color: #00A1D8;
     }
 
     .bg-overlay {
@@ -661,12 +678,22 @@ p.fixed-bottom {
         font-size: 48px;
     }
 
+    #pricing h5 {
+        font-size: 28px;
+        font-family: Helvetica;
+        font-weight: bold;
+    }
+
 
     .bg-overlay {
         padding-top: 5vh;
         height: 100vh;
     }
 
+
+    #latestNewsContainer h1 {
+        margin-top: 10rem;
+    }
 
 
     video,
@@ -689,11 +716,28 @@ p.fixed-bottom {
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {}
+@media only screen and (min-width: 992px) {
+
+
+    .blog {
+        width: 30vw;
+        height: 30vh;
+    }
+
+    .blog-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 0.5em;
+        justify-content: center;
+    }
+}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-
+    .fa {
+        font-size: 50px;
+        color: #00A1D8;
+    }
 
     .carousel-indicators {
         display: block;
@@ -724,12 +768,12 @@ p.fixed-bottom {
     .blog-container {
         display: flex;
         /* grid-template-columns: repeat(3, 1fr); */
-        grid-gap: 10px;
+        grid-gap: 0;
         justify-content: center;
     }
 
     .blog {
-        width: 23vw;
+        width: 25vw;
         height: 35vh;
     }
 

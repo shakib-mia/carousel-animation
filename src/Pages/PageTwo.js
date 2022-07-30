@@ -9,49 +9,49 @@ const PageTwo = () => {
             What We Offer
           </h1>
 
-          <div className="row row-cols-1 row-cols-md-3 row-cols-lg-4 justify-content-center text-start mt-lg-5">
+          <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 justify-content-lg-center text-start mt-lg-5">
             <div
-              className="col my-auto py-1 py-lg-5 custom-card position-relative"
+              className="col my-auto py-1 p4-lg-5 custom-card position-relative"
               id="card1"
             >
-              <i className="fa fa-magnifying-glass mb-4"></i>
+              <i className="fa fa-magnifying-glass mb-1 mb-md-4"></i>
 
               <h5>Load Search & Freight Procurement</h5>
-              <p className="mt-3 h5">Paperwork & Back Office</p>
+              <p className="my-1 mt-md-3">Paperwork & Back Office</p>
               <a
                 href="#"
-                className="btn rounded-pill px-4 py-2 mt-3 red-button"
+                className="btn rounded-pill px-4 py-1 py-md-1 mt-0 mt-md-3 red-button"
               >
                 Get Started
               </a>
             </div>
 
             <div
-              className="col my-auto py-3 py-lg-5 custom-card position-relative"
+              className="col my-auto py-4 py-lg-5 custom-card position-relative"
               id="card2"
             >
-              <i class="fa fa-dollar-sign mb-4"></i>
+              <i className="fa fa-dollar-sign mb-1 mb-md-4"></i>
               <h5>Negotiating Rate with Shippers & Brokers</h5>
-              <p className="mt-3 h5">Invoicing & Billing</p>
+              <p className="my-1 mt-md-3">Invoicing & Billing</p>
               <a
                 href="#"
-                className="btn rounded-pill px-4 py-2 mt-3 red-button"
+                className="btn rounded-pill px-4 py-1 py-md-1 mt-0 mt-md-3 red-button"
               >
                 Get Started
               </a>
             </div>
 
             <div
-              className="col my-auto py-3 py-lg-5 custom-card position-relative"
+              className="col my-auto py-4 py-lg-5 custom-card position-relative"
               id="card3"
             >
-              <i class="fa fa-phone-volume mb-4"></i>
+              <i className="fa fa-phone-volume mb-1 mb-md-4"></i>
 
               <h5>Checked Calls & Transport Updates</h5>
-              <p className="mt-3 h5">24/7 Customer Support</p>
+              <p className="my-1 mt-md-3">24/7 Customer Support</p>
               <a
                 href="#"
-                className="btn rounded-pill px-4 py-2 mt-3 red-button"
+                className="btn rounded-pill px-4 py-1 py-md-1 mt-0 mt-md-3 red-button"
               >
                 Get Started
               </a>
