@@ -6,10 +6,10 @@ const BlogPage = () => {
     <div className="container h-100 pt-3">
       <img src={FooterImg} className="col-12 h-50" alt="" />
       <div className="py-5 text-center">
-        <h1 className="sectionHeading">
+        <h1 className="sectionHeading fw-bold">
           Everyday inspired by the Beauty of the Mountains
         </h1>
-        <h6>By Steve Solomon</h6>
+        <h6 className="fw-bold">By Steve Solomon</h6>
       </div>
       <p className="text-justify">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis cum

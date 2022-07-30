@@ -488,6 +488,7 @@ figcaption {
     height: 120%;
     position: relative;
     top: -2vh;
+    transition: all 0.5s;
 }
 
 
@@ -561,6 +562,10 @@ footer {
 p.fixed-bottom {
     background-color: #f9faff;
     margin-bottom: 0;
+    text-align: justify;
+}
+
+.text-justify {
     text-align: justify;
 }
 
