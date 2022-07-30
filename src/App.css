@@ -10,6 +10,12 @@ body {
 }
 
 
+#prev,
+#next {
+    visibility: hidden;
+}
+
+
 .navbar {
     transition: all 1s;
 }
@@ -572,6 +578,10 @@ p.fixed-bottom {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+    #quote h1 {
+        font-size: 40px;
+    }
+
     #pricing h1 {
         font-size: 28px;
     }

@@ -11,7 +11,7 @@ const PageTwo = () => {
 
           <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 justify-content-lg-center text-start mt-lg-5">
             <div
-              className="col my-auto py-1 p4-lg-5 custom-card mx-3 position-relative"
+              className="col my-auto py-3 py-lg-5 custom-card mx-3 my-1 position-relative"
               id="card1"
             >
               <i className="fa fa-magnifying-glass mb-1 mb-md-4"></i>
@@ -27,7 +27,7 @@ const PageTwo = () => {
             </div>
 
             <div
-              className="col my-auto py-4 py-lg-5 custom-card mx-3 position-relative"
+              className="col my-auto py-3 py-sm-3 py-lg-5 custom-card mx-3 my-1 position-relative"
               id="card2"
             >
               <i className="fa fa-dollar-sign mb-1 mb-md-4"></i>
@@ -42,7 +42,7 @@ const PageTwo = () => {
             </div>
 
             <div
-              className="col my-auto py-4 py-lg-5 custom-card mx-3 position-relative"
+              className="col my-auto py-3 py-sm-3 py-lg-5 custom-card mx-3 my-1 position-relative"
               id="card3"
             >
               <i className="fa fa-phone-volume mb-1 mb-md-4"></i>

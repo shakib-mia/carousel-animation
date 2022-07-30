@@ -12,6 +12,7 @@ const Navbar = ({ textColorCondition }) => {
   const [button, setButton] = useState("red-button");
   const [togglerColor, setToggler] = useState("text-white");
   const [navbarBg, setNavbarBg] = useState("bg-transparent");
+  const [toggleBorder, setToggleBorder] = useState("border-light");
 
   const navbarScrolling = () => {
     if (
@@ -25,12 +26,14 @@ const Navbar = ({ textColorCondition }) => {
       setButton("red-button");
       setToggler("text-white");
       setNavbarBg("bg-transparent");
+      setToggleBorder("border-light");
     } else {
       setButton("red-button-alt");
       setTextColor("text-dark");
       setLogo(DarkLogo);
       setToggler("text-dark");
       setNavbarBg("bg-lightblue");
+      setToggleBorder("border-dark");
     }
   };
 
@@ -183,7 +186,7 @@ const Navbar = ({ textColorCondition }) => {
           <img src={logo} alt="" className="img-responsive w-75" />
         </Link>
         <button
-          class={`navbar-toggler ${togglerColor}`}
+          class={`navbar-toggler ${togglerColor} me-3 border border-3 ${toggleBorder}`}
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarTogglerDemo02"

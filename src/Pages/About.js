@@ -17,8 +17,11 @@ const About = () => {
             >
               <img src={AboutImg} alt="" className="img-fluid" />
             </div>
-            <div className="position-relative col my-auto ps-5" id="about-text">
-              <img src={quote} className="col-3 h-25" alt="" />
+            <div
+              className="position-relative col my-auto ps-lg-5"
+              id="about-text"
+            >
+              <img src={quote} className="col-3 h-25 ms-4 ms-lg-0" alt="" />
               <p className="fw-bold h4">
                 "Since I joined Refersion five years ago, we doubled our
                 customer base-- and we're still growing fast. This progress
